@@ -128,7 +128,7 @@ li{
         height: 2px;
     }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 1000px) {
     #menu-hide{
         background: white !important;
         max-height: 2px;
@@ -138,12 +138,12 @@ li{
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
    #menus-responsivos{
-    height: 70px;
+    height: 50px;
    }
    #espacamento{
-    height: 2px;
+    height: 25px !important;
    }
 }
 #botao-menu{
@@ -163,7 +163,7 @@ li{
     transition: height 5s ease-out;
 }
 #menus-responsivos{
-    background: rgba(0, 149, 255, 0.733);
+    background: rgba(0, 149, 255, 0.644);
     border: solid 1px #fdfdfd;
 }
 
