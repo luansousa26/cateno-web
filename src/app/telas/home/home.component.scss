@@ -16,3 +16,22 @@ img{
 .blue{
     background: #3498db;
 }
+#home{
+    padding-top: 6%;
+}
+#btn-saber-mais{
+    background:#A4CE22;
+    color: white;
+    font-weight: bold;
+    padding: 13px 34px 14px;
+    border-radius: 60px;
+    transition: 2s;
+    border: solid 1px transparent;
+    cursor: pointer;
+}
+#btn-saber-mais:hover{
+    background: #3498db;
+}
+#button-content{
+    padding-top: 13px;
+}

@@ -2,6 +2,8 @@ mat-toolbar{
     background: #ffffff;
     color: #343434;
     font-weight: bold;
+    position: fixed;
+    z-index: 10000;
 }
 img{
     max-width: 130px;
@@ -106,5 +108,10 @@ li{
         border-right-color: transparent;
         border-bottom-color: #A4CE22;
         border-left-color: #A4CE22;
+    }
+}
+@media only screen and (max-width: 999px) {
+    ul{
+        display: none;
     }
 }
