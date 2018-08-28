@@ -1,0 +1,37 @@
+mat-toolbar{
+    background: #ffffff;
+    color: #343434;
+    font-weight: bold;
+}
+img{
+    max-width: 130px;
+    height: auto;
+}
+#logo-cateno{
+    margin-left: 30px;
+    margin-top: 15px;
+}
+li{
+    float: left;
+    padding-left: 20px;
+    cursor: pointer;
+    height: 100%;
+}
+.menu-itens{
+    border-color: white;
+    border-style: solid;
+    padding: 5px;
+    transition: 0.9s;
+}
+#menu{
+    margin-left: 25%;
+    font-size: 17px;
+    color:#545454;
+    
+}
+.menu-itens:hover{
+        border-color: #A7CD20;
+        color: #A7CD20;
+        font-weight: bold;
+        font-size: 18px;
+}
