@@ -5,6 +5,12 @@ mat-toolbar{
     position: fixed;
     z-index: 10000;
 }
+mat-toolbar-row{
+    height: 70px;
+}
+.toolbar-container{
+    height: 90px;
+}
 img{
     max-width: 130px;
     height: auto;
@@ -25,6 +31,7 @@ li{
     display: inline-block;
 }
 #menu{
+    margin-top: 40px;
     margin-left: 25%;
     font-size: 17px;
     color:#545454;
@@ -114,4 +121,29 @@ li{
     ul{
         display: none;
     }
+    #botao-menu {
+        display: block !important;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    #menu-hide{
+        background: white !important;
+        max-height: 2px;
+    }
+}
+#botao-menu{
+    display: none;
+    float: right;
+    margin-top: 42px;
+    color:#6f6f6f;
+    cursor: pointer;
+    transition: 1s;
+}
+#botao-menu:hover{
+    color: #A4CE22;
+}
+#menu-hide{
+    background: white;
+    height: 2px;
+    transition: height 5s ease-out;
 }

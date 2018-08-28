@@ -1,16 +1,38 @@
-<mat-toolbar>
-  <mat-toolbar-row>
-    <div id="logo-cateno">
-      <img src="assets/logos/logo_cateno.png">
+<div class="toolbar-container">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <div id="logo-cateno">
+        <img src="assets/logos/logo_cateno.png">
+      </div>
+      <div id="botao-menu">
+        <i (click)="mostrarMenu()" class="fa fa-caret-square-o-down"></i>
+      </div>
+      <div id="menu">
+        <ul>
+          <li>
+            <div class="menu-itens">Quem Somos</div>
+          </li>
+          <li>
+            <div class="menu-itens">Soluções</div>
+          </li>
+          <li>
+            <div class="menu-itens">Notícias</div>
+          </li>
+          <li>
+            <div class="menu-itens">Social</div>
+          </li>
+          <li>
+            <div class="menu-itens">Contato</div>
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+<div>
+  <div id="menu-hide" class="col-md-12 col-sm-12">
+    <div class="row">
+
     </div>
-    <div id="menu">
-      <ul>
-        <li><div class="menu-itens">Quem Somos</div></li>
-        <li><div class="menu-itens">Soluções</div></li>
-        <li><div class="menu-itens">Notícias</div></li>
-        <li><div class="menu-itens">Social</div></li>
-        <li><div class="menu-itens">Contato</div></li>
-      </ul>
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
+  </div>
+</div>
