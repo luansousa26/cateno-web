@@ -124,12 +124,27 @@ li{
     #botao-menu {
         display: block !important;
     }
+    #menu-hide{
+        height: 2px;
+    }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (max-width: 1000px) {
     #menu-hide{
         background: white !important;
         max-height: 2px;
     }
+    #menus-responsividade{
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+   #menus-responsivos{
+    height: 70px;
+   }
+   #espacamento{
+    height: 2px;
+   }
 }
 #botao-menu{
     display: none;
@@ -146,4 +161,18 @@ li{
     background: white;
     height: 2px;
     transition: height 5s ease-out;
+}
+#menus-responsivos{
+    background: rgba(0, 149, 255, 0.733);
+    border: solid 1px #fdfdfd;
+}
+
+#menus-responsividade{
+    display: none;    
+}
+#alinhamento-menus{
+    height: 100px;
+}
+#espacamento{
+    height: 55px;   
 }
