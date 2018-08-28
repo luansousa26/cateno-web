@@ -145,6 +145,9 @@ li{
    #espacamento{
     height: 25px !important;
    }
+   .icone{
+    font-size: 33px !important;
+}
 }
 #botao-menu{
     display: none;
@@ -171,8 +174,13 @@ li{
     display: none;    
 }
 #alinhamento-menus{
+    text-align: center;
     height: 100px;
 }
 #espacamento{
     height: 55px;   
+}
+.icone{
+    color: white;
+    font-size: 66px;
 }
