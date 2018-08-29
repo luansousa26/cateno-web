@@ -35,3 +35,10 @@ img{
 #button-content{
     padding-top: 13px;
 }
+
+
+@media only screen and (max-width: 577px) {
+    #home{
+        padding-top: 22%;
+    }
+}

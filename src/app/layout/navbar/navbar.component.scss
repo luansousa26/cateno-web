@@ -153,6 +153,13 @@ li{
         margin-top: 17px;
     }
 }
+
+@media only screen and (max-width: 577px) {
+    .icone{
+        display: none;
+    }
+}
+
 #botao-menu{
     display: none;
     float: right;
@@ -164,7 +171,6 @@ li{
 #botao-menu:hover{
     color: $cor-cateno-verde;
 }
-
 
 
 /*      MENU HIDE    */
@@ -191,7 +197,7 @@ li{
     cursor: pointer;
 }
 .menu-responsivo-texto:hover{
-    color: #dee2e6;
+    color: #343a40;
 }
 #menu-hide{
     position: fixed;

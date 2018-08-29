@@ -17,6 +17,11 @@
     margin-top: -157px;
     margin-left: -50px;
     text-align: center;
+    transition: background 1s;
+    cursor: pointer;
+}
+.informacao-cartao:hover{
+    background: rgba(255, 255, 255, 0.671);
 }
 /*  imagens */
 img{
@@ -29,7 +34,10 @@ img{
     margin-top: 10px;
 }
 .informacao-cartao-texto{
-    margin-top: 30px;
+    margin-top: 26px;
     color: #212529;
     font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
