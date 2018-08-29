@@ -20,17 +20,17 @@ img{
     padding-top: 6%;
 }
 #btn-saber-mais{
-    background:#A4CE22;
+    background: linear-gradient(217deg, #3498db, #A4CE22 100%);
     color: white;
     font-weight: bold;
     padding: 13px 34px 14px;
     border-radius: 60px;
-    transition: 2s;
-    border: solid 1px transparent;
+    transition: 0.5s;
+    border: solid 1px white;
     cursor: pointer;
 }
 #btn-saber-mais:hover{
-    background: #3498db;
+    background: linear-gradient(217deg, rgba(163, 206, 34, 0.801), #3498dbd0  60%);
 }
 #button-content{
     padding-top: 13px;

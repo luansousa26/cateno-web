@@ -1,3 +1,5 @@
+$cor-cateno-verde: #A4CE22;
+
 mat-toolbar{
     background: #ffffff;
     color: #343434;
@@ -55,7 +57,7 @@ li{
     0%{
         width: 0;
         height: 0;
-        border-top-color: #A4CE22;
+        border-top-color: $cor-cateno-verde;
         border-right-color: transparent;
         border-bottom-color: transparent;
         border-left-color: transparent;
@@ -63,16 +65,16 @@ li{
     50%{
         width: 100%;
         height: 0;
-        border-top-color: #A4CE22;
-        border-right-color: #A4CE22;
+        border-top-color: $cor-cateno-verde;
+        border-right-color: $cor-cateno-verde;
         border-bottom-color: transparent;
         border-left-color: transparent;
     }
     100%{
         width: 100%;
         height: 100%;
-        border-top-color: #A4CE22;
-        border-right-color: #A4CE22;
+        border-top-color: $cor-cateno-verde;
+        border-right-color: $cor-cateno-verde;
         border-bottom-color: transparent;
         border-left-color: transparent;
     }
@@ -98,23 +100,23 @@ li{
         border-top-color: transparent;
         border-right-color: transparent;
         border-bottom-color: transparent;
-        border-left-color: #A4CE22;;
+        border-left-color: $cor-cateno-verde;;
     }
     50%{
         width: 0;
         height: 100%;
         border-top-color: transparent;
         border-right-color: transparent;
-        border-bottom-color: #A4CE22;
-        border-left-color: #A4CE22;
+        border-bottom-color: $cor-cateno-verde;
+        border-left-color: $cor-cateno-verde;
     }
     100%{
         width: 100%;
         height: 100%;
         border-top-color: transparent;
         border-right-color: transparent;
-        border-bottom-color: #A4CE22;
-        border-left-color: #A4CE22;
+        border-bottom-color: $cor-cateno-verde;
+        border-left-color: $cor-cateno-verde;
     }
 }
 @media only screen and (max-width: 999px) {
@@ -147,7 +149,11 @@ li{
    }
    .icone{
     font-size: 33px !important;
-}
+    }
+    
+    .menu-responsivo-texto{
+        margin-top: 17px;
+    }
 }
 #botao-menu{
     display: none;
@@ -158,7 +164,7 @@ li{
     transition: 1s;
 }
 #botao-menu:hover{
-    color: #A4CE22;
+    color: $cor-cateno-verde;
 }
 #menu-hide{
     background: white;
@@ -166,8 +172,7 @@ li{
     transition: height 5s ease-out;
 }
 #menus-responsivos{
-    background: rgba(0, 149, 255, 0.644);
-    border: solid 1px #fdfdfd;
+    background: linear-gradient(217deg, rgba(163, 206, 34, 0.671), #36abfab4  60%);
 }
 
 #menus-responsividade{
@@ -182,5 +187,11 @@ li{
 }
 .icone{
     color: white;
-    font-size: 66px;
+    font-size: 50px;
+}
+.menu-responsivo-texto{
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
 }
