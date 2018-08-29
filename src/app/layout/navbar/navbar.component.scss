@@ -195,10 +195,11 @@ li{
 }
 #menu-hide{
     position: fixed;
-    z-index: 10000;
+    z-index: 99999;
     background: transparent;
     height: 2px;
     transition: height 5s ease-out;
+    margin-top: 80px;
 }
 #menus-responsivos{
     background: linear-gradient(217deg, rgb(163, 206, 34), #36acfa  60%);
