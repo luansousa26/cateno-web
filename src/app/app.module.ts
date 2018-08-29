@@ -5,12 +5,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { HomeComponent } from './telas/home/home.component';
+import { CartoesComponent } from './layout/cartoes/cartoes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    CartoesComponent
   ],
   imports: [
     BrowserModule,

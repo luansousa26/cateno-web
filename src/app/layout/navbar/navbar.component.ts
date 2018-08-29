@@ -38,7 +38,7 @@ export class NavbarComponent implements OnInit {
       document.getElementById('menus-responsividade').style.display = 'none';
     }, 900);
     setTimeout(() => {
-      document.getElementById('menu-hide').style.background = 'white';
+      document.getElementById('menu-hide').style.background = 'transparent';
     }, 4000);
   }
 }

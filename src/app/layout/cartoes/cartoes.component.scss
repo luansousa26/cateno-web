@@ -1,0 +1,23 @@
+#cartoes{
+    margin-top:10px;
+}
+.cartao {
+    position:relative;
+    float: right;
+    width: 70%;
+    height: 200px;
+    margin-bottom: 5px;
+}
+.informacao-cartao{
+    position:absolute;
+    height: 100px;
+    width: 250px;
+    background: rgba(163, 206, 34, 0.671);
+    margin-top: -157px;
+    margin-left: -50px;
+}
+/*  imagens */
+img{
+    width: 100%;
+    height: 200px;
+}

@@ -6,12 +6,10 @@ mat-toolbar{
     font-weight: bold;
     position: fixed;
     z-index: 10000;
+    height: 90px;
 }
 mat-toolbar-row{
     height: 70px;
-}
-.toolbar-container{
-    height: 90px;
 }
 img{
     max-width: 130px;
@@ -132,7 +130,7 @@ li{
 }
 @media only screen and (min-width: 1000px) {
     #menu-hide{
-        background: white !important;
+        background: transparent !important;
         max-height: 2px;
     }
     #menus-responsividade{
@@ -192,18 +190,18 @@ li{
     transition: color 1s;
     cursor: pointer;
 }
-.menu-responsivo-texto:hover, .menu-responsivo-texto:hover + .icone {
-    color: #343a40;
+.menu-responsivo-texto:hover{
+    color: #dee2e6;
 }
-
-
 #menu-hide{
-    background: white;
+    position: fixed;
+    z-index: 10000;
+    background: transparent;
     height: 2px;
     transition: height 5s ease-out;
 }
 #menus-responsivos{
-    background: linear-gradient(217deg, rgba(163, 206, 34, 0.671), #36abfab4  60%);
+    background: linear-gradient(217deg, rgb(163, 206, 34), #36acfa  60%);
 }
 #menus-responsividade{
     display: none;    
