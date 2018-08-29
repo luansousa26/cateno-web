@@ -166,6 +166,37 @@ li{
 #botao-menu:hover{
     color: $cor-cateno-verde;
 }
+
+
+
+/*      MENU HIDE    */
+
+/* Ícone que fica escondido dentro do #menu-hide */
+.icone{
+    color: white;
+    transition: color 1s;
+    font-size: 50px;
+    cursor: pointer;
+}
+/* Deixa o icone e o texto com uma cor diferente */
+.icone:hover, .icone:hover + .menu-responsivo-texto  {
+    color: #343a40;
+}
+
+
+.menu-responsivo-texto{
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    transition: color 1s;
+    cursor: pointer;
+}
+.menu-responsivo-texto:hover, .menu-responsivo-texto:hover + .icone {
+    color: #343a40;
+}
+
+
 #menu-hide{
     background: white;
     height: 2px;
@@ -183,14 +214,4 @@ li{
 }
 #espacamento{
     height: 55px;   
-}
-.icone{
-    color: white;
-    font-size: 50px;
-}
-.menu-responsivo-texto{
-    color: white;
-    font-weight: bold;
-    font-size: 12px;
-    text-align: center;
 }
