@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { HomeComponent } from './telas/home/home.component';
 import { CartoesComponent } from './layout/cartoes/cartoes.component';
+import { SolicitarCartaoComponent } from './layout/solicitar-cartao/solicitar-cartao.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    CartoesComponent
+    CartoesComponent,
+    SolicitarCartaoComponent
   ],
   imports: [
     BrowserModule,
