@@ -16,6 +16,7 @@
     background: rgba(163, 206, 34, 0.671);
     margin-top: -157px;
     margin-left: -50px;
+    text-align: center;
 }
 /*  imagens */
 img{
@@ -26,4 +27,9 @@ img{
 #linha{
     margin-left: 40px;
     margin-top: 10px;
+}
+.informacao-cartao-texto{
+    margin-top: 30px;
+    color: #212529;
+    font-weight: bold;
 }
