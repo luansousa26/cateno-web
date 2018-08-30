@@ -74,15 +74,10 @@ img:hover{
     border-radius: 60px;
     border: solid 1px white;
     cursor: pointer;
+    transition: all 0.9s ease-in-out;
 }
 
 #btn-solicitar:hover {
-    background: linear-gradient(to left,#3498db, #A4CE22);
+    background: linear-gradient(to left, #A4CE22, #A4CE22);
     border-radius: 0px;
-  }
-  .rotate {
-    transition: all 0.9s ease-in-out;
-  }
-  .rotate:hover {
-    transition: all 1s ease-in-out;
   }
