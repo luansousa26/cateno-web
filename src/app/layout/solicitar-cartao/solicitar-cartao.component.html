@@ -1,30 +1,44 @@
 <div class="col-md-12 col-sm-12">
   <div class="row">
-    <div id="form" class="fundo col-md-6 col-sm-12"></div>
+    <div id="form" class="fundo col-md-6 col-sm-12">
+     <div align="center">
+      <div align="left" id="form-container" class="col-md-10 col-sm-12">
+        <mat-card>
+          <form #soliciCard="ngForm" id="form-solicitar-cartao">
+            <div class="row">
+              <div class="col-md-12">
+                <mat-form-field class="full-width">
+                  <input [(ngModel)]="dadosPessoais.nome" name="campo-nome" matInput (keypress)="apenasCaracteres($event)" maxlength="100" placeholder="Nome Completo">
+                </mat-form-field>
+              </div>
+              <div class="col-md-12">
+                <mat-form-field id="cpf" class="full-width">
+                  <input [(ngModel)]="dadosPessoais.cpf" name="campo-cpf" (keypress)="apenasNumeros($event);mascaraCpf($event)" maxlength="14" matInput placeholder="CPF">
+                </mat-form-field>
+            </div>
+            <div class="col-md-12">
+              <mat-form-field class="full-width">
+                <input [(ngModel)]="dadosPessoais.email" name="campo-email" matInput placeholder="E-mail" maxlength="254">
+              </mat-form-field>
+          </div>
+            </div>
+          </form>
+        </mat-card>
+      </div>
+     </div>
+    </div>
     <div class="fundo col-md-6 col-sm-12">
       <div id="texto-pedir-cartao">
-        <div id="titulo">
-          <span>Peça já seu Cartão</span>
-        </div>
-        <div id="beneficios">
-          <div class="row">
-            <div class="col-md-6 col-sm-12">
-              <ul>
-                <li><div class="quadrado pink"></div>Desenho customizável</li>
-                <li>recarregável</li>
-                <li>internacional</li>
-                <li>bandeira Elo</li>
-              </ul>
-            </div>
-            <div class="col-md-6 col-sm-12">
-              <ul>
-                <li>teste</li>
-                <li>teste</li>
-                <li>teste</li>
-                <li>teste</li>
-              </ul>
-            </div>
+        <div class="row">
+          <div class="col-md-12" id="titulo">
+            <span>Peça já seu Cartão</span>
           </div>
+          <div class="col-md-12" id="beneficios">
+           <img src="assets/cartoes/cartao-sem-nome.png">
+           <div class="col-md-10" id="nome-cartao">
+             <span>{{nomeCartao}}</span>
+           </div>
+        </div>
         </div>
       </div>
     </div>

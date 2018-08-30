@@ -13,6 +13,11 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
           style({
             marginLeft: '-10%'
           }),
+        ])),
+        animate(3000, keyframes([
+          style({
+            marginLeft: '0px'
+          }),
         ]))
       ]),
     ]),
