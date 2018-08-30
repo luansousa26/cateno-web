@@ -36,6 +36,7 @@ img:hover{
     margin-left: 0px;
 }
 #beneficios{
+    margin-top: 50px;
     font-size: 25px;
 }
 .pink{
@@ -63,3 +64,26 @@ img:hover{
     font-size: 17px;
     color:#c9c9c9;;
 }
+
+
+#btn-solicitar{
+    background: linear-gradient(217deg, #3498db, #A4CE22 100%);
+    color: white;
+    font-weight: bold;
+    padding: 13px 34px 14px;
+    border-radius: 60px;
+    border: solid 1px white;
+    cursor: pointer;
+}
+
+#btn-solicitar:hover {
+    transform: rotate(360deg);
+    background: linear-gradient(to left,#3498db, #A4CE22);
+    border-radius: 0px;
+  }
+  .rotate {
+    transition: all 0.9s ease-in-out;
+  }
+  .rotate:hover {
+    transition: all 1s ease-in-out;
+  }

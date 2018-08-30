@@ -11,6 +11,7 @@ img{
 #texto-cartao{
     color:#545454;
     padding-top: 4%;
+    padding-bottom: 4px;
     font-size: 14px;
 }
 .blue{
@@ -35,7 +36,7 @@ img{
     border-radius: 0px;
   }
   .rotate {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.9s ease-in-out;
   }
   .rotate:hover {
     transition: all 1s ease-in-out;
