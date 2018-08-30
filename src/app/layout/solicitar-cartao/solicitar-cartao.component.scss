@@ -1,6 +1,14 @@
 img{
+    border-radius: 4%;
     width: 66%;
+    max-height: 184px;
+    transition: 1s;
+    cursor: pointer;
 }
+img:hover{
+    opacity: 0.8;
+}
+
 .fundo{
     background: #3498db;
 }

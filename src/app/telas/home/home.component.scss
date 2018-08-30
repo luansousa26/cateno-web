@@ -25,13 +25,23 @@ img{
     font-weight: bold;
     padding: 13px 34px 14px;
     border-radius: 60px;
-    transition: 0.5s;
     border: solid 1px white;
     cursor: pointer;
 }
-#btn-saber-mais:hover{
-    background: linear-gradient(217deg, rgba(163, 206, 34, 0.801), #3498dbd0  60%);
-}
+
+#btn-saber-mais:hover {
+    transform: rotate(360deg);
+    background: linear-gradient(to left,#3498db, #A4CE22);
+    border-radius: 0px;
+  }
+  .rotate {
+    transition: all 0.5s ease-in-out;
+  }
+  .rotate:hover {
+    transition: all 1s ease-in-out;
+  }
+
+
 #button-content{
     padding-top: 13px;
 }
