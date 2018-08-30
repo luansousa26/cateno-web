@@ -20,7 +20,7 @@ export class SolicitarCartaoComponent implements OnInit {
 
   apenasCaracteres(teclaPressionada: KeyboardEvent) {
     const regexLetras = new RegExp('[a-zA-Z ]');
-    this.preencheNomeCartao();
+    this.preencheNomeCartao(teclaPressionada);
     return regexLetras.test(teclaPressionada.key) ? true : false;
   }
   validarEmail(email: string) {
@@ -52,7 +52,7 @@ export class SolicitarCartaoComponent implements OnInit {
     }
   }
 
-  preencheNomeCartao() {
+  preencheNomeCartao(teclaPressionada: KeyboardEvent) {
     if(this.dadosPessoais.nome !== null && this.dadosPessoais.nome !== undefined) {
       this.dadosPessoais.nome.length < 19? this.nomeCartao = this.dadosPessoais.nome: false;
     }
