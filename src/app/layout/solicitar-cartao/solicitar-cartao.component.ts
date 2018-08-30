@@ -17,10 +17,9 @@ export class SolicitarCartaoComponent implements OnInit {
 
   ngOnInit() {
   }
-
   apenasCaracteres(teclaPressionada: KeyboardEvent) {
     const regexLetras = new RegExp('[a-zA-Z ]');
-    this.preencheNomeCartao(teclaPressionada);
+    this.preencheNomeCartao();
     return regexLetras.test(teclaPressionada.key) ? true : false;
   }
   validarEmail(email: string) {
@@ -52,7 +51,7 @@ export class SolicitarCartaoComponent implements OnInit {
     }
   }
 
-  preencheNomeCartao(teclaPressionada: KeyboardEvent) {
+  preencheNomeCartao() {
     if(this.dadosPessoais.nome !== null && this.dadosPessoais.nome !== undefined) {
       this.dadosPessoais.nome.length < 19? this.nomeCartao = this.dadosPessoais.nome: false;
     }
