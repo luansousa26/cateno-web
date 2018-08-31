@@ -12,6 +12,7 @@ import { GraficosComponent } from './layout/graficos/graficos.component';
 import { PrimeNGModule } from './shared/modulos-compartilhados/primeng/primeng.module';
 import { CadastroClienteComponent } from './telas/cadastro-cliente/cadastro-cliente.component';
 import {AppRoutingModule} from './shared/routes/app-routing.module';
+import { CadastroClienteService } from './telas/cadastro-cliente/cadastro-cliente.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import {AppRoutingModule} from './shared/routes/app-routing.module';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    CadastroClienteService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
