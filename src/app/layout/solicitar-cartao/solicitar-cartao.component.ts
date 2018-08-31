@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DadosPessoais } from '../../shared/modulos-compartilhados/models/dados-pessoais.model';
+import { DadosPessoais } from '../../shared/models/dados-pessoais.model';
 import { Enums } from '../../shared/enums/enums';
 import { Validacoes } from '../../shared/validacoes/validacoes';
 

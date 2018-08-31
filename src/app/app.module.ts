@@ -8,6 +8,7 @@ import { HomeComponent } from './telas/home/home.component';
 import { CartoesComponent } from './layout/cartoes/cartoes.component';
 import { SolicitarCartaoComponent } from './layout/solicitar-cartao/solicitar-cartao.component';
 import { FormsModule } from '@angular/forms';
+import { GraficosComponent } from './layout/graficos/graficos.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     HomeComponent,
     CartoesComponent,
-    SolicitarCartaoComponent
+    SolicitarCartaoComponent,
+    GraficosComponent
   ],
   imports: [
     BrowserModule,
