@@ -3,6 +3,7 @@ import { DadosPessoais } from '../../shared/models/dados-pessoais.model';
 import { Enums } from '../../shared/enums/enums';
 import { Validacoes } from '../../shared/validacoes/validacoes';
 import {Router} from '@angular/router';
+import { CadastroClienteService } from '../../telas/cadastro-cliente/cadastro-cliente.service';
 
 @Component({
   selector: 'app-solicitar-cartao',
@@ -15,7 +16,8 @@ export class SolicitarCartaoComponent implements OnInit {
   nomeCartao: string;
   estadoCpf = true;
   focusEmail = true;
-  constructor(private router:Router ) {
+  constructor(private router:Router,
+              private service: CadastroClienteService) {
     this.dadosPessoais = new DadosPessoais();
   }
 
@@ -64,6 +66,7 @@ export class SolicitarCartaoComponent implements OnInit {
     }
   }
   solicitarCartao() {
+    this.service.preencherDados(this.dadosPessoais);
     this.router.navigate(['/cadastro-cliente']);
   }
 }
