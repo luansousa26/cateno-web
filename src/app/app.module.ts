@@ -9,6 +9,8 @@ import { CartoesComponent } from './layout/cartoes/cartoes.component';
 import { SolicitarCartaoComponent } from './layout/solicitar-cartao/solicitar-cartao.component';
 import { FormsModule } from '@angular/forms';
 import { GraficosComponent } from './layout/graficos/graficos.component';
+import { PrimeNGModule } from './shared/modulos-compartilhados/primeng/primeng.module';
+import { CadastroClienteComponent } from './telas/cadastro-cliente/cadastro-cliente.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { GraficosComponent } from './layout/graficos/graficos.component';
     HomeComponent,
     CartoesComponent,
     SolicitarCartaoComponent,
-    GraficosComponent
+    GraficosComponent,
+    CadastroClienteComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
+    PrimeNGModule,
     FormsModule
   ],
   providers: [],

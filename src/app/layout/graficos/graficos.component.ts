@@ -26,28 +26,37 @@ export class GraficosComponent implements OnInit {
   }
 
   getTotalPacientes() {
-   
-      this.totalPacientes = 100;
+      this.totalPacientes = 225;
       this.inicializaGrafico();
   }
   inicializaGrafico() {
     this.data = {
-      labels: ['Pacientes Cadastrados','B','C'],
+      labels: ['Pacientes Cadastrados','B'],
       datasets: [
           {
               label: 'Gráfico',
-              data: [this.totalPacientes, 50, 100],
+              data: [this.totalPacientes,500],
               backgroundColor: [
-                  "#FF6384",
-                  "#36A2EB",
-                  "#FFCE56"
+                  '#B2D135',
+                  '#08A9B4'
               ],
               hoverBackgroundColor: [
                   "#FF6384",
-                  "#36A2EB",
-                  "#FFCE56"
+                  "#36A2EB"
               ]
-          }]    
+          },
+          {
+            label: 'TESTE',
+            data: [300,330],
+            backgroundColor: [
+                '#B2D135',
+                '#08A9B4'
+            ],
+            hoverBackgroundColor: [
+                "#FF6384",
+                "#36A2EB"
+            ]
+        }]    
       };
   }
   alterarGrafico() {
