@@ -23,18 +23,7 @@ img:hover{
     font-size: 35px;
     font-family: "Comic Sans MS", cursive, sans-serif !important;
 }
-.col-md-12{
-    padding-right: 0px;
-    padding-left: 0px;
-}
-.col-sm-12{
-    padding-right: 0px;
-    padding-left: 0px;
-}
-.row{
-    margin-right: 0px;
-    margin-left: 0px;
-}
+
 #beneficios{
     margin-top: 50px;
     font-size: 25px;
@@ -67,17 +56,24 @@ img:hover{
 
 
 #btn-solicitar{
-    background: linear-gradient(217deg, #3498db, #A4CE22 100%);
+    background: #b2d135;
     color: white;
     font-weight: bold;
     padding: 13px 34px 14px;
     border-radius: 60px;
     border: solid 1px white;
     cursor: pointer;
-    transition: all 0.9s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 #btn-solicitar:hover {
-    background: linear-gradient(to left, #A4CE22, #A4CE22);
+    color: #545454;
+    background: #c0f002;
     border-radius: 0px;
   }
+  @media only screen and (max-width:768px) {
+    #beneficios{
+        padding-right: 70px;
+        height: 140px;
+    }
+}
