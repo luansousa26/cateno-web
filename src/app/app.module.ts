@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { GraficosComponent } from './layout/graficos/graficos.component';
 import { PrimeNGModule } from './shared/modulos-compartilhados/primeng/primeng.module';
 import { CadastroClienteComponent } from './telas/cadastro-cliente/cadastro-cliente.component';
+import {AppRoutingModule} from './shared/routes/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CadastroClienteComponent } from './telas/cadastro-cliente/cadastro-clie
     BrowserAnimationsModule,
     AngularMaterialModule,
     PrimeNGModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

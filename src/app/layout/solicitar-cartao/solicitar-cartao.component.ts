@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DadosPessoais } from '../../shared/models/dados-pessoais.model';
 import { Enums } from '../../shared/enums/enums';
 import { Validacoes } from '../../shared/validacoes/validacoes';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-solicitar-cartao',
@@ -14,7 +15,7 @@ export class SolicitarCartaoComponent implements OnInit {
   nomeCartao: string;
   estadoCpf = true;
   focusEmail = true;
-  constructor() {
+  constructor(private router:Router ) {
     this.dadosPessoais = new DadosPessoais();
   }
 
@@ -61,5 +62,8 @@ export class SolicitarCartaoComponent implements OnInit {
     if (this.dadosPessoais.nome !== null && this.dadosPessoais.nome !== undefined) {
       this.dadosPessoais.nome.length < 19 ? this.nomeCartao = this.dadosPessoais.nome : false;
     }
+  }
+  solicitarCartao() {
+    this.router.navigate(['/cadastro-cliente']);
   }
 }
