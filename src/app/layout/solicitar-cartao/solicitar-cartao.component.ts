@@ -13,7 +13,7 @@ export class SolicitarCartaoComponent implements OnInit {
   dadosPessoais: DadosPessoais;
   nomeCartao: string;
   estadoCpf = true;
-
+  focusEmail = true;
   constructor() {
     this.dadosPessoais = new DadosPessoais();
   }
@@ -24,8 +24,8 @@ export class SolicitarCartaoComponent implements OnInit {
     this.preencheNomeCartao();
     return new RegExp(Enums.LETRAS_E_ESPACO).test(teclaPressionada.key) ? true : false;
   }
-  validarEmail(email: string) {
-    return new RegExp(Enums.EMAIL).test(email) ? true : false;
+  validarEmail() {
+    this.focusEmail = new RegExp(Enums.EMAIL).test(this.dadosPessoais.email) ? true : false;
   }
   apenasNumeros(teclaPressionada: KeyboardEvent) {
     return new RegExp(Enums.NUMERICO).test(teclaPressionada.key) ? true : false;
