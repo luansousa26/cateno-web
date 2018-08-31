@@ -13,15 +13,16 @@
     position:absolute;
     height: 140px;
     width: 250px;
-    background: rgba(164, 206, 34, 0.5803921568627451);
+    background-image: url('../../../assets/fundo-cateno-menor.png');
+    background-size: cover;
     margin-top: -157px;
     margin-left: -155px;
     text-align: center;
     transition: all 1s;
     cursor: pointer;
 }
-.informacao-cartao:hover{
-    background: rgba(69, 137, 214, 0.671);
+.informacao-cartao:hover > .informacao-cartao-texto{
+   color: #343a40;
 }
 /*  imagens */
 img{
@@ -35,11 +36,12 @@ img{
 }
 .informacao-cartao-texto{
     margin-top: 12px;
-    color: #2c2c2c;
+    color: #f8f9fa;
     font-weight: bold;
     font-size: 12px;
-    text-shadow: 0 0 12px #f8f9fa;
+    text-shadow: 0 0 5px #343a40;
+    transition: all 1s;
     text-transform: uppercase;
-    font-family: Andale Mono, monospace;    
+    font-family: Andale Mono, monospace; 
 }
 
