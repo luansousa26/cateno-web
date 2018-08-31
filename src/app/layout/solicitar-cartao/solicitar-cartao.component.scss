@@ -74,6 +74,15 @@ img:hover{
   @media only screen and (max-width:768px) {
     #beneficios{
         padding-right: 70px;
-        height: 140px;
+        height: 190px;
+    }
+}
+
+@media only screen and (max-width:557px) {
+    .informacao-cartao{
+        margin-left: 0px;
+    }
+    .cartao{
+        float: left;
     }
 }
