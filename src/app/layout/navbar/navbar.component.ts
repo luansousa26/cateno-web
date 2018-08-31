@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
 
   abrirMenu() {
     document.getElementById('menu-hide').style.background = 'rgba(163, 206, 34, 0.541)';
-    document.getElementById('menu-hide').style.height = '200px';
+    document.getElementById('menu-hide').style.height = '350px';
     document.getElementById('menu-hide').style.transition = 'height 4s ease-in';
     setTimeout(() => {
       document.getElementById('menus-responsividade').style.display = 'block';

@@ -218,5 +218,89 @@ li{
     height: 100px;
 }
 #espacamento{
-    height: 55px;   
+    height: 130px;
+}
+
+
+.menu-info-claro{
+    height: 100px;
+    background: rgba(206, 205, 205, 0.41);
+    cursor: pointer;
+    transition: width 2s, height 2s, transform 2s;
+}
+.menu-info-escuro{
+    height: 100px;
+    background : rgba(206, 205, 205, 0.64);
+    cursor: pointer;
+}
+
+.square{
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin-top: 5px;
+    margin-right: 4px;
+}
+.blue{
+    background: #3498db;
+}
+.green{
+    background:#1abc9c;
+}
+.purple{
+    background: #9b59b6;
+}
+.orange{
+    background: #e67e22;
+}
+.red{
+    background: #e74c3c;
+}
+.yellow{
+    background: #d9a81d;
+}
+#quem-somos:hover {
+    background: linear-gradient(to right, rgba(206, 205, 205, 0.64) 50%, #097ac5 50% );
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 1.0s ease-out;   
+  }
+  #quem-somos:hover{
+    color: white;
+}
+#solucoes:hover {
+    background: linear-gradient(to right, rgba(206, 205, 205, 0.64) 50%, #00b18d 50% );
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 1.0s ease-out;   
+  }
+  #solucoes:hover{
+    color: white;
+}
+#noticias:hover {
+    background: linear-gradient(to right, rgba(206, 205, 205, 0.64) 50%, #8303b6 50% );
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 1.0s ease-out;   
+  }
+  #noticias:hover{
+    color: white;
+}
+#social:hover {
+    background: linear-gradient(to right, rgba(206, 205, 205, 0.64) 50%, #e76c00 50% );
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 1.0s ease-out;   
+  }
+  #social:hover{
+    color: white;
+}
+#contato:hover {
+    background: linear-gradient(to right, rgba(206, 205, 205, 0.64) 50%, #e71801 50% );
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 1.0s ease-out;   
+  }
+  #contato:hover{
+    color: white;
 }
