@@ -15,6 +15,7 @@ import { CadastroClienteComponent } from './telas/cadastro-cliente/cadastro-clie
 import {AppRoutingModule} from './shared/routes/app-routing.module';
 import { CadastroClienteService } from './telas/cadastro-cliente/cadastro-cliente.service';
 import { FooterComponent } from './layout/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FooterComponent } from './layout/footer/footer.component';
     AngularMaterialModule,
     PrimeNGModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     CadastroClienteService

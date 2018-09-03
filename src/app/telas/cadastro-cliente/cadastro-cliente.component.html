@@ -37,28 +37,61 @@
             <div class="row">
               <div class="col-md-3 col-sm-6">
                 <mat-form-field class="full-width">
-                  <input name="campo-data-nascimento" matInput [(ngModel)]="dadosPessoais.nome" maxlength="100" placeholder="Data de nascimento"
-                    required>
+                  <input name="campo-data-nascimento" [matDatepicker]="datanascimento" matInput [(ngModel)]="dadosPessoais.dataNascimento"
+                    placeholder="Data de nascimento" required>
+                  <mat-datepicker-toggle matSuffix [for]="datanascimento"></mat-datepicker-toggle>
+                  <mat-datepicker #datanascimento></mat-datepicker>
                 </mat-form-field>
               </div>
-              <div class="col-md-3 col-sm-6">
+              <div class="col-md-2 col-sm-6">
                 <mat-form-field class="full-width">
                   <input name="campo-rg" matInput [(ngModel)]="dadosPessoais.rg" maxlength="12" placeholder="RG" required>
                 </mat-form-field>
               </div>
               <div class="col-md-3 col-sm-6">
                 <mat-form-field class="full-width">
-                  <input name="campo-estadoEmissor" (click)="filtro()" matInput [(ngModel)]="dadosPessoais.estadorEmissor" placeholder="Estado Emissor"
-                    (ngModelChange)="filtro()" aria-label="estadoEmissor" [matAutocomplete]="auto" required>
-                  <mat-autocomplete #auto="matAutocomplete">
-                    <mat-option *ngFor="let estado of estados" [value]="estado.sigla">
-                      <span>{{estado.titulo}}</span>
+                  <input name="campo-estadoEmissor" (click)="filtrarEstados()" matInput [(ngModel)]="dadosPessoais.estadorEmissor" placeholder="Estado Emissor"
+                    (ngModelChange)="filtrarEstados()" aria-label="estadoEmissor" [matAutocomplete]="autoEstados">
+                  <mat-autocomplete #autoEstados="matAutocomplete">
+                    <mat-option *ngFor="let estado of estadosFiltrados" [value]="estado.nome">
+                      <span>{{estado.nome}}</span>
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <mat-form-field class="full-width">
+                  <input name="campo-orgaoExpeditor" (click)="filtrarOrgaos()" matInput [(ngModel)]="dadosPessoais.orgaoExpedidor" placeholder="Órgão Expedidor"
+                    (ngModelChange)="filtrarOrgaos()" aria-label="orgaoExpeditor" [matAutocomplete]="autoOrgaos" required>
+                  <mat-autocomplete #autoOrgaos="matAutocomplete">
+                    <mat-option *ngFor="let orgao of orgaosFiltrados" [value]="orgao.nome">
+                      <span>{{orgao.nome}}</span>
                     </mat-option>
                   </mat-autocomplete>
                 </mat-form-field>
               </div>
             </div>
-
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <mat-form-field class="full-width">
+                  <input name="campo-data-expedicao" [matDatepicker]="dataExpedicao" matInput [(ngModel)]="dadosPessoais.dataExpedicao" placeholder="Data de Expedição"
+                    required>
+                  <mat-datepicker-toggle matSuffix [for]="dataExpedicao"></mat-datepicker-toggle>
+                  <mat-datepicker #dataExpedicao></mat-datepicker>
+                </mat-form-field>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <mat-form-field class="full-width">
+                  <input name="campo-nacionalidade" (click)="filtrarNacionalidades()" matInput [(ngModel)]="dadosPessoais.nacionalidade" placeholder="Nacionalidade"
+                    (ngModelChange)="filtrarNacionalidades()" aria-label="nacionalidade" [matAutocomplete]="autoNacionalidade">
+                  <mat-autocomplete #autoNacionalidade="matAutocomplete">
+                    <mat-option *ngFor="let nacionalidade of nacionalidadesFiltradas" [value]="nacionalidade.nome">
+                      <span>{{nacionalidade.nome}}</span>
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+              </div>
+            </div>
             <div class="row">
               <div id="group" class="col-md-4 col-sm-12">
                 <small>Sexo*</small>

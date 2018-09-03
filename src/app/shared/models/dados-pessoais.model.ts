@@ -13,7 +13,7 @@ export class DadosPessoais {
     celular?: string;
     apelido?: string;
     rg?: string;
-    órgãoExpedidor?: string;
+    orgaoExpedidor?: string;
     estadorEmissor?: string;
     dataExpedicao?: string;
     estadoCivil?: string;

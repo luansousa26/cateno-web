@@ -1,0 +1,22 @@
+[
+   {"nome": "Secretaria de Segurança Pública", "sigla":"SSP"},
+   {"nome": "Polícia Militar", "sigla":"PM"},
+   {"nome": "Policia Civil", "sigla":"PC"},
+   {"nome": "Carteira Nacional de Habilitação", "sigla":"CNT"},
+   {"nome": "Diretoria de Identificação Civil", "sigla":"DIC"},
+   {"nome": "Carteira de Trabaho e Previdência Social", "sigla":"CTPS"},
+   {"nome": "Fundo de Garantia do Tempo de Serviço", "sigla":"FGTS"},    
+   {"nome": "Instituto Félix Pacheco", "sigla":"IFP"},    
+   {"nome": "Instituto Pereira Faustino", "sigla":"IPF"},   
+   {"nome": "Instituto Médico-Legal", "sigla":"IML"}, 
+   {"nome": "Ministério do Trabalho e Emprego", "sigla":"MTE"}, 
+   {"nome": "Ministério da Marinha", "sigla":"MMA"}, 
+   {"nome": "Ministério da Aeronáutica", "sigla":"MAE"}, 
+   {"nome": "Ministério do Exército", "sigla":"MEX"}, 
+   {"nome": "Polícia Federal", "sigla":"POF"}, 
+   {"nome": "Polícia Militar", "sigla":"POM"}, 
+   {"nome": "Carteira de Estrangeiro", "sigla":"SES"}, 
+   {"nome": "Secretaria da Justiça e Segurança", "sigla":"SJS"}, 
+   {"nome": "Secretaria da Justiça do Trabalho e Segurança", "sigla":"SJTS"},
+   {"nome": "Outros (inclusive exterior)", "sigla":"ZZZ"}
+]
