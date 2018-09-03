@@ -7,7 +7,7 @@ export class AutocompleteFuncoes {
         pesquisa ? true : pesquisa = '';
         valoresFiltrados = JSON.parse(JSON.stringify(valores));
 
-        valoresFiltrados = this.filtrar(pesquisa, valores);
+        valoresFiltrados = this.filtrar(pesquisa.toLocaleLowerCase(), valores);
         
         return valoresFiltrados;
     }
