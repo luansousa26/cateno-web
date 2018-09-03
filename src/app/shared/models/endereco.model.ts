@@ -6,7 +6,7 @@ export class Endereco{
     cep?: string;
     complemento?: string;
     bairro?: string;
-    cidade?: string;
+    localidade?: string; // cidade alterado para localidade por causa do retorno.
     uf?: string;
     constructor() {
 
