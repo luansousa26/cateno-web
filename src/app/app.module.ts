@@ -14,6 +14,8 @@ import { PrimeNGModule } from './shared/modulos-compartilhados/primeng/primeng.m
 import { CadastroClienteComponent } from './telas/cadastro-cliente/cadastro-cliente.component';
 import {AppRoutingModule} from './shared/routes/app-routing.module';
 import { CadastroClienteService } from './telas/cadastro-cliente/cadastro-cliente.service';
+import {MatListModule} from '@angular/material/list';
+import { CarouselModule } from 'ngx-bootstrap';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -36,6 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     PrimeNGModule,
     FormsModule,
     AppRoutingModule,
+    MatListModule,
+    CarouselModule,
     HttpClientModule
   ],
   providers: [
