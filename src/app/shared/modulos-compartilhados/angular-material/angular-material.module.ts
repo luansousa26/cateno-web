@@ -5,7 +5,8 @@ import {  MatToolbarModule,
           MatInputModule,
           MatOptionModule,
           MatSelectModule,
-          MatButtonToggleModule} from '@angular/material';
+          MatButtonToggleModule,
+          MatAutocompleteModule} from '@angular/material';
 @NgModule({
   imports: [
     CommonModule
@@ -16,7 +17,8 @@ import {  MatToolbarModule,
     MatInputModule,
     MatOptionModule,
     MatSelectModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatAutocompleteModule
   ],
   declarations: []
 })

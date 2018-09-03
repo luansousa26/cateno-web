@@ -9,6 +9,7 @@ import { CartoesComponent } from './layout/cartoes/cartoes.component';
 import { SolicitarCartaoComponent } from './layout/solicitar-cartao/solicitar-cartao.component';
 import { FormsModule } from '@angular/forms';
 import { GraficosComponent } from './layout/graficos/graficos.component';
+import {QuemSomosComponent} from './telas/quem-somos/quem-somos.component';
 import { PrimeNGModule } from './shared/modulos-compartilhados/primeng/primeng.module';
 import { CadastroClienteComponent } from './telas/cadastro-cliente/cadastro-cliente.component';
 import {AppRoutingModule} from './shared/routes/app-routing.module';
@@ -24,7 +25,8 @@ import { FooterComponent } from './layout/footer/footer.component';
     SolicitarCartaoComponent,
     GraficosComponent,
     CadastroClienteComponent,
-    FooterComponent
+    FooterComponent,
+    QuemSomosComponent
   ],
   imports: [
     BrowserModule,
