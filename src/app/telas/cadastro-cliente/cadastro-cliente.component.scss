@@ -43,3 +43,23 @@ hr{
 #card-row{
     margin-bottom: 40px;
 }
+#btn-salvar{
+    background: #b2d135;
+    color: white;
+    font-weight: bold;
+    padding: 13px 34px 14px;
+    border-radius: 60px;
+    border: solid 1px white;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+#btn-salvar:hover {
+    text-shadow: 1px 2px 4px #0d0e0f;
+    border-radius: 0px;
+  }
+  #btn-salvar:disabled {
+    border-radius: 60px;
+    text-shadow: none;
+    background: rgba(0, 0, 0, 0.199);
+}

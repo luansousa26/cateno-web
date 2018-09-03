@@ -7,13 +7,30 @@ import { MAT_DATE_LOCALE } from '@angular/material';
 import { Endereco } from '../../shared/models/endereco.model';
 import { Enums } from '../../shared/enums/enums';
 import { Validacoes } from '../../shared/validacoes/validacoes';
+import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 @Component({
   selector: 'app-cadastro-cliente',
   templateUrl: './cadastro-cliente.component.html',
   styleUrls: ['./cadastro-cliente.component.scss'],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
+  ],
+  animations: [
+    trigger('cadastro', [
+      state('false', style({
+        marginLeft: '-100%',
+        transition: '2s'
+      })),
+      transition('false => true', [
+        animate(3000, keyframes([
+          style({
+            marginLeft: '0',
+          }),
+        ])),
+      ]),
+    ]),
   ]
+
 })
 export class CadastroClienteComponent implements OnInit {
 
@@ -30,6 +47,7 @@ export class CadastroClienteComponent implements OnInit {
   estadoCpf = true;
   estadoCep = true;
   estadoEmail = true;
+  animacao = 'false';
 
   constructor(private service: CadastroClienteService) {
     this.dadosPessoais = new DadosPessoais();
@@ -41,8 +59,14 @@ export class CadastroClienteComponent implements OnInit {
     this.preencherOrgaos();
     this.preencherNacionalidades();
     this.carregarDados();
+    this.iniciarAnimacao();
   }
 
+  private iniciarAnimacao(): void {
+    setTimeout(() => {
+      this.animacao = 'true';
+    }, 300);
+  }
   private carregarDados(): void {
     if (this.service.devolverDados()) {
       this.dadosPessoais = this.service.devolverDados();

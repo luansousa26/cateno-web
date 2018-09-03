@@ -1,214 +1,220 @@
-<div class="col-md-12 col-sm-12" id="cateno-cadastro">
-  <div class="row">
+<div  [@cadastro]="animacao" class="col-md-12 col-sm-12" id="cateno-cadastro">
+  <div  class="row">
     <div class="col-md-2 col-sm-12">
     </div>
     <div class="col-md-9 col-sm-12">
-      <mat-card id="card-row">
+      <mat-card  id="card-row">
         <div>
-          <div class="titulo"><span> Informações pessoais</span></div>
-          <hr>
-          <div>
-            <div class="row">
-              <div class="col-md-8 col-sm-12">
-                <mat-form-field class="full-width">
-                  <input name="campo-nome" matInput [(ngModel)]="dadosPessoais.nome" (keydown)="apenasCaracteres($event)" maxlength="100" placeholder="Nome completo"
-                    required>
-                </mat-form-field>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <mat-form-field class="full-width">
-                  <input name="campo-apelido" matInput [(ngModel)]="dadosPessoais.apelido" (keydown)="apenasCaracteres($event)" maxlength="50"
-                    placeholder="Apelido">
-                </mat-form-field>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-8 col-sm-12">
-                <mat-form-field class="full-width">
-                  <input name="campo-nome-mae" matInput [(ngModel)]="dadosPessoais.nomeMae" (keydown)="apenasCaracteres($event)" maxlength="100"
-                    placeholder="Nome completo da mãe" required>
-                </mat-form-field>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <mat-form-field class="full-width">
-                  <input name="campo-cpf" matInput [(ngModel)]="dadosPessoais.cpf" (focusout)="validarCpf()" (keypress)="mascararCpf($event)"
-                    minlength="14" maxlength="14" placeholder="CPF" required>
-                </mat-form-field>
-                <div class="invalido" *ngIf="dadosPessoais.cpf && !estadoCpf">
-                  <span>CPF inválido.</span><img class="icone-invalido" src="assets/icones/errado.png">
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-3 col-sm-6">
-                <mat-form-field class="full-width">
-                  <input name="campo-data-nascimento" [matDatepicker]="datanascimento" matInput [(ngModel)]="dadosPessoais.dataNascimento"
-                    placeholder="Data de nascimento" required>
-                  <mat-datepicker-toggle matSuffix [for]="datanascimento"></mat-datepicker-toggle>
-                  <mat-datepicker #datanascimento></mat-datepicker>
-                </mat-form-field>
-              </div>
-              <div class="col-md-2 col-sm-6">
-                <mat-form-field class="full-width">
-                  <input name="campo-rg" matInput [(ngModel)]="dadosPessoais.rg" (keydown)="apenasCaracteres($event)" maxlength="12" placeholder="RG"
-                    required>
-                </mat-form-field>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <mat-form-field class="full-width">
-                  <input name="campo-estadoEmissor" (click)="filtrarEstados()" matInput [(ngModel)]="dadosPessoais.estadorEmissor" placeholder="Estado Emissor"
-                    (ngModelChange)="filtrarEstados()" aria-label="estadoEmissor" [matAutocomplete]="autoEstados">
-                  <mat-autocomplete #autoEstados="matAutocomplete">
-                    <mat-option *ngFor="let estado of estadosFiltrados" [value]="estado.nome">
-                      <span>{{estado.nome}}</span>
-                    </mat-option>
-                  </mat-autocomplete>
-                </mat-form-field>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <mat-form-field class="full-width">
-                  <input name="campo-orgaoExpeditor" (click)="filtrarOrgaos()" matInput [(ngModel)]="dadosPessoais.orgaoExpedidor" placeholder="Órgão Expedidor"
-                    (ngModelChange)="filtrarOrgaos()" aria-label="orgaoExpeditor" [matAutocomplete]="autoOrgaos" required>
-                  <mat-autocomplete #autoOrgaos="matAutocomplete">
-                    <mat-option *ngFor="let orgao of orgaosFiltrados" [value]="orgao.nome">
-                      <span>{{orgao.nome}}</span>
-                    </mat-option>
-                  </mat-autocomplete>
-                </mat-form-field>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3 col-sm-6">
-                <mat-form-field class="full-width">
-                  <input name="campo-data-expedicao" [matDatepicker]="dataExpedicao" matInput [(ngModel)]="dadosPessoais.dataExpedicao" placeholder="Data de Expedição"
-                    required>
-                  <mat-datepicker-toggle matSuffix [for]="dataExpedicao"></mat-datepicker-toggle>
-                  <mat-datepicker #dataExpedicao></mat-datepicker>
-                </mat-form-field>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <mat-form-field class="full-width">
-                  <input name="campo-nacionalidade" (click)="filtrarNacionalidades()" matInput [(ngModel)]="dadosPessoais.nacionalidade" placeholder="Nacionalidade"
-                    (ngModelChange)="filtrarNacionalidades()" aria-label="nacionalidade" [matAutocomplete]="autoNacionalidade">
-                  <mat-autocomplete #autoNacionalidade="matAutocomplete">
-                    <mat-option *ngFor="let nacionalidade of nacionalidadesFiltradas " [value]="nacionalidade.nome">
-                      <span>{{nacionalidade.nome}}</span>
-                    </mat-option>
-                  </mat-autocomplete>
-                </mat-form-field>
-              </div>
-            </div>
-            <div class="row">
-              <div id="group" class="col-md-4 col-sm-12">
-                <small>Sexo*</small>
-                <mat-button-toggle-group [(ngModel)]="dadosPessoais.sexo" #group="matButtonToggleGroup" required>
-                  <div class="row">
-                    <mat-button-toggle class="col-md-6 col-sm-12" value="M">
-                      <span>Masculino</span>
-                    </mat-button-toggle>
-                    <mat-button-toggle class="col-md-6 col-sm-12" value="F">
-                      <span>Feminino</span>
-                    </mat-button-toggle>
-                  </div>
-                </mat-button-toggle-group>
-              </div>
-              <div id="group" class="col-md-8 col-sm-12">
-                <small>Estado Civil</small>
-                <mat-button-toggle-group [(ngModel)]="dadosPessoais.estadoCivil" #group="matButtonToggleGroup">
-                  <div class="row">
-                    <mat-button-toggle class="toogle-responsivo" value="SOLTEIRO">
-                      <span>Solteiro(a)</span>
-                    </mat-button-toggle>
-                    <mat-button-toggle class="toogle-responsivo" value="CASADO">
-                      <span>Casado(a)</span>
-                    </mat-button-toggle>
-                    <mat-button-toggle class="toogle-responsivo" value="SEPARADO">
-                      <span>Separado(a)</span>
-                    </mat-button-toggle>
-                    <mat-button-toggle class="toogle-responsivo" value="DIVORCIADO">
-                      <span>Divorciado(a)</span>
-                    </mat-button-toggle>
-                    <mat-button-toggle class="toogle-responsivo" value="VIUVO">
-                      <span>Viúvo(a)</span>
-                    </mat-button-toggle>
-                  </div>
-                </mat-button-toggle-group>
-              </div>
-            </div>
-            <br/><br/>
-            <div class="titulo"><span>Contato</span></div>
+          <form #form="ngForm" name="form">
+            <div class="titulo"><span> Informações pessoais</span></div>
             <hr>
-            <div class="row">
-              <div class="col-md-2 col-sm-6">
-                <mat-form-field class="full-width">
-                  <input name="campo-cep" matInput [(ngModel)]="dadosPessoais.endereco.cep" (focusout)="buscarCep()" (keypress)="mascararCep($event)"
-                    minlength="9" maxlength="9" placeholder="CEP" required>
-                </mat-form-field>
-                <div class="invalido" *ngIf="dadosPessoais.endereco.cep && !estadoCep">
-                  <span>CEP inválido.</span><img class="icone-invalido" src="assets/icones/errado.png">
+            <div>
+              <div class="row">
+                <div class="col-md-8 col-sm-12">
+                  <mat-form-field class="full-width">
+                    <input name="campo-nome" matInput [(ngModel)]="dadosPessoais.nome" (keydown)="apenasCaracteres($event)" maxlength="100" placeholder="Nome completo"
+                      required>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <mat-form-field class="full-width">
+                    <input name="campo-apelido" matInput [(ngModel)]="dadosPessoais.apelido" (keydown)="apenasCaracteres($event)" maxlength="50"
+                      placeholder="Apelido">
+                  </mat-form-field>
                 </div>
               </div>
-              <div class="col-md-7 col-sm-12">
-                <mat-form-field class="full-width">
-                  <input name="campo-logradouro" matInput [disabled]="true" [(ngModel)]="dadosPessoais.endereco.logradouro" maxlength="150"
-                    placeholder="Logradouro" required>
-                </mat-form-field>
+              <div class="row">
+                <div class="col-md-8 col-sm-12">
+                  <mat-form-field class="full-width">
+                    <input name="campo-nome-mae" matInput [(ngModel)]="dadosPessoais.nomeMae" (keydown)="apenasCaracteres($event)" maxlength="100"
+                      placeholder="Nome completo da mãe" required>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <mat-form-field class="full-width">
+                    <input name="campo-cpf" matInput [(ngModel)]="dadosPessoais.cpf" (focusout)="validarCpf()" (keypress)="mascararCpf($event)"
+                      minlength="14" maxlength="14" placeholder="CPF" required>
+                  </mat-form-field>
+                  <div class="invalido" *ngIf="dadosPessoais.cpf && !estadoCpf">
+                    <span>CPF inválido.</span><img class="icone-invalido" src="assets/icones/errado.png">
+                  </div>
+                </div>
               </div>
-              <div class="col-md-2 col-sm-4">
-                <mat-form-field class="full-width">
-                  <input name="campo-numero" matInput [(ngModel)]="dadosPessoais.endereco.numero" (keypress)="apenasNumeros($event)" maxlength="5"
-                    placeholder="Número" required>
-                </mat-form-field>
+
+              <div class="row">
+                <div class="col-md-3 col-sm-6">
+                  <mat-form-field class="full-width">
+                    <input name="campo-data-nascimento" [matDatepicker]="datanascimento" matInput [(ngModel)]="dadosPessoais.dataNascimento"
+                      placeholder="Data de nascimento" required>
+                    <mat-datepicker-toggle matSuffix [for]="datanascimento"></mat-datepicker-toggle>
+                    <mat-datepicker #datanascimento></mat-datepicker>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                  <mat-form-field class="full-width">
+                    <input name="campo-rg" matInput [(ngModel)]="dadosPessoais.rg" (keydown)="apenasCaracteres($event)" maxlength="12" placeholder="RG"
+                      required>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <mat-form-field class="full-width">
+                    <input name="campo-estadoEmissor" (click)="filtrarEstados()" matInput [(ngModel)]="dadosPessoais.estadorEmissor" placeholder="Estado Emissor"
+                      (ngModelChange)="filtrarEstados()" aria-label="estadoEmissor" [matAutocomplete]="autoEstados">
+                    <mat-autocomplete #autoEstados="matAutocomplete">
+                      <mat-option *ngFor="let estado of estadosFiltrados" [value]="estado.nome">
+                        <span>{{estado.nome}}</span>
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <mat-form-field class="full-width">
+                    <input name="campo-orgaoExpeditor" (click)="filtrarOrgaos()" matInput [(ngModel)]="dadosPessoais.orgaoExpedidor" placeholder="Órgão Expedidor"
+                      (ngModelChange)="filtrarOrgaos()" aria-label="orgaoExpeditor" [matAutocomplete]="autoOrgaos" required>
+                    <mat-autocomplete #autoOrgaos="matAutocomplete">
+                      <mat-option *ngFor="let orgao of orgaosFiltrados" [value]="orgao.nome">
+                        <span>{{orgao.nome}}</span>
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </div>
               </div>
-              <div class="col-md-1 col-sm-4">
-                <mat-form-field class="full-width">
-                  <input name="campo-uf" [disabled]="true" matInput [(ngModel)]="dadosPessoais.endereco.uf" placeholder="UF" required>
-                </mat-form-field>
+              <div class="row">
+                <div class="col-md-3 col-sm-6">
+                  <mat-form-field class="full-width">
+                    <input name="campo-data-expedicao" [matDatepicker]="dataExpedicao" matInput [(ngModel)]="dadosPessoais.dataExpedicao" placeholder="Data de Expedição"
+                      required>
+                    <mat-datepicker-toggle matSuffix [for]="dataExpedicao"></mat-datepicker-toggle>
+                    <mat-datepicker #dataExpedicao></mat-datepicker>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <mat-form-field class="full-width">
+                    <input name="campo-nacionalidade" (click)="filtrarNacionalidades()" matInput [(ngModel)]="dadosPessoais.nacionalidade" placeholder="Nacionalidade"
+                      (ngModelChange)="filtrarNacionalidades()" aria-label="nacionalidade" [matAutocomplete]="autoNacionalidade">
+                    <mat-autocomplete #autoNacionalidade="matAutocomplete">
+                      <mat-option *ngFor="let nacionalidade of nacionalidadesFiltradas " [value]="nacionalidade.nome">
+                        <span>{{nacionalidade.nome}}</span>
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 col-sm-6">
-                <mat-form-field class="full-width">
-                  <input name="campo-complemento" matInput [(ngModel)]="dadosPessoais.endereco.complemento" placeholder="Complemento" required>
-                </mat-form-field>
+              <div class="row">
+                <div id="group" class="col-md-4 col-sm-12">
+                  <small>Sexo*</small>
+                  <mat-button-toggle-group [(ngModel)]="dadosPessoais.sexo" name="sexo" #group="matButtonToggleGroup" required>
+                    <div class="row">
+                      <mat-button-toggle class="col-md-6 col-sm-12" value="M">
+                        <span>Masculino</span>
+                      </mat-button-toggle>
+                      <mat-button-toggle class="col-md-6 col-sm-12" value="F">
+                        <span>Feminino</span>
+                      </mat-button-toggle>
+                    </div>
+                  </mat-button-toggle-group>
+                </div>
+                <div id="group" class="col-md-8 col-sm-12">
+                  <small>Estado Civil</small>
+                  <mat-button-toggle-group [(ngModel)]="dadosPessoais.estadoCivil" name="estadoCivil" #group="matButtonToggleGroup">
+                    <div class="row">
+                      <mat-button-toggle class="toogle-responsivo" value="SOLTEIRO">
+                        <span>Solteiro(a)</span>
+                      </mat-button-toggle>
+                      <mat-button-toggle class="toogle-responsivo" value="CASADO">
+                        <span>Casado(a)</span>
+                      </mat-button-toggle>
+                      <mat-button-toggle class="toogle-responsivo" value="SEPARADO">
+                        <span>Separado(a)</span>
+                      </mat-button-toggle>
+                      <mat-button-toggle class="toogle-responsivo" value="DIVORCIADO">
+                        <span>Divorciado(a)</span>
+                      </mat-button-toggle>
+                      <mat-button-toggle class="toogle-responsivo" value="VIUVO">
+                        <span>Viúvo(a)</span>
+                      </mat-button-toggle>
+                    </div>
+                  </mat-button-toggle-group>
+                </div>
               </div>
-              <div class="col-md-4 col-sm-6">
-                <mat-form-field class="full-width">
-                  <input name="campo-cidade" [disabled]="true" matInput [(ngModel)]="dadosPessoais.endereco.localidade" placeholder="Cidade"
-                    required>
-                </mat-form-field>
+              <br/><br/>
+              <div class="titulo"><span>Contato</span></div>
+              <hr>
+              <div class="row">
+                <div class="col-md-2 col-sm-6">
+                  <mat-form-field class="full-width">
+                    <input name="campo-cep" matInput [(ngModel)]="dadosPessoais.endereco.cep" (focusout)="buscarCep()" (keypress)="mascararCep($event)"
+                      minlength="9" maxlength="9" placeholder="CEP" required>
+                  </mat-form-field>
+                  <div class="invalido" *ngIf="dadosPessoais.endereco.cep && !estadoCep">
+                    <span>CEP inválido.</span><img class="icone-invalido" src="assets/icones/errado.png">
+                  </div>
+                </div>
+                <div class="col-md-7 col-sm-12">
+                  <mat-form-field class="full-width">
+                    <input name="campo-logradouro" matInput [disabled]="true" [(ngModel)]="dadosPessoais.endereco.logradouro" maxlength="150"
+                      placeholder="Logradouro" required>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-2 col-sm-4">
+                  <mat-form-field class="full-width">
+                    <input name="campo-numero" matInput [(ngModel)]="dadosPessoais.endereco.numero" (keypress)="apenasNumeros($event)" maxlength="5"
+                      placeholder="Número" required>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-1 col-sm-4">
+                  <mat-form-field class="full-width">
+                    <input name="campo-uf" [disabled]="true" matInput [(ngModel)]="dadosPessoais.endereco.uf" placeholder="UF" required>
+                  </mat-form-field>
+                </div>
               </div>
-              <div class="col-md-4 col-sm-6">
-                <mat-form-field class="full-width">
-                  <input name="campo-bairro" matInput [disabled]="true" [(ngModel)]="dadosPessoais.endereco.bairro" placeholder="Bairro" required>
-                </mat-form-field>
+              <div class="row">
+                <div class="col-md-4 col-sm-6">
+                  <mat-form-field class="full-width">
+                    <input name="campo-complemento" matInput [(ngModel)]="dadosPessoais.endereco.complemento" placeholder="Complemento" required>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <mat-form-field class="full-width">
+                    <input name="campo-cidade" [disabled]="true" matInput [(ngModel)]="dadosPessoais.endereco.localidade" placeholder="Cidade"
+                      required>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <mat-form-field class="full-width">
+                    <input name="campo-bairro" matInput [disabled]="true" [(ngModel)]="dadosPessoais.endereco.bairro" placeholder="Bairro" required>
+                  </mat-form-field>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-md-2 col-sm-6">
-                <mat-form-field class="full-width">
-                  <input name="campo-telefone" matInput [(ngModel)]="dadosPessoais.telefone" (keypress)="validarTelefone($event,'F');" maxlength="13"
-                    placeholder="Telefone" required>
-                </mat-form-field>
-              </div>
-              <div class="col-md-2 col-sm-6">
-                <mat-form-field class="full-width">
-                  <input name="campo-celular" matInput [(ngModel)]="dadosPessoais.celular" (keypress)="validarTelefone($event,'C');" maxlength="14"
-                    placeholder="Celular" required>
-                </mat-form-field>
-              </div>
-              <div class="col-md-6 col-sm-6">
-                <mat-form-field class="full-width">
-                  <input name="campo-email" matInput [(ngModel)]="dadosPessoais.email" placeholder="E-mail" (focusout)="validarEmail()" maxlength="254"
-                    required>
-                </mat-form-field>
-                <div class="invalido" *ngIf="dadosPessoais.email && !estadoEmail">
-                  <span>E-mail inválido.</span><img class="icone-invalido" src="assets/icones/errado.png">
+              <div class="row">
+                <div class="col-md-2 col-sm-6">
+                  <mat-form-field class="full-width">
+                    <input name="campo-telefone" matInput [(ngModel)]="dadosPessoais.telefone" (keypress)="validarTelefone($event,'F');" maxlength="13"
+                      placeholder="Telefone" required>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                  <mat-form-field class="full-width">
+                    <input name="campo-celular" matInput [(ngModel)]="dadosPessoais.celular" (keypress)="validarTelefone($event,'C');" maxlength="14"
+                      placeholder="Celular" required>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <mat-form-field class="full-width">
+                    <input name="campo-email" matInput [(ngModel)]="dadosPessoais.email" placeholder="E-mail" (focusout)="validarEmail()" maxlength="254"
+                      required>
+                  </mat-form-field>
+                  <div class="invalido" *ngIf="dadosPessoais.email && !estadoEmail">
+                    <span>E-mail inválido.</span><img class="icone-invalido" src="assets/icones/errado.png">
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+            <div>
+              <div align="center"><button  id="btn-salvar" (click)="solicitarCartao()" [disabled]="form.invalid || !estadoCpf || !estadoEmail || !estadoCep"
+                   mat-raised-button>Salvar</button></div>
+            </div>
+          </form>
         </div>
       </mat-card>
     </div>
