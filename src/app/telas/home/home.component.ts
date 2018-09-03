@@ -7,18 +7,17 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
   styleUrls: ['./home.component.scss'],
   animations: [
     trigger('container', [
-      state('active', style({})),
+      state('inactive', style({
+        marginLeft: '-100%',
+        opacity: '0'
+      })),
       transition('inactive => active', [
-        animate(3000, keyframes([
+        animate(6000, keyframes([
           style({
-            marginLeft: '-10%'
+            marginLeft: '0',
+            opacity: '1 '
           }),
         ])),
-        animate(3000, keyframes([
-          style({
-            marginLeft: '0px'
-          }),
-        ]))
       ]),
     ]),
   ]

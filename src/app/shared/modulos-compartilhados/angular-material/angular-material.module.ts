@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {  MatToolbarModule, 
-          MatCardModule, 
-          MatInputModule,
-          MatOptionModule,
-          MatSelectModule,
-          MatButtonToggleModule} from '@angular/material';
+import {
+  MatToolbarModule,
+  MatCardModule,
+  MatInputModule,
+  MatOptionModule,
+  MatSelectModule,
+  MatButtonToggleModule,
+  MatAutocompleteModule,
+  MatDatepickerModule,
+  MatNativeDateModule
+} from '@angular/material';
 @NgModule({
   imports: [
     CommonModule
@@ -16,7 +21,10 @@ import {  MatToolbarModule,
     MatInputModule,
     MatOptionModule,
     MatSelectModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatAutocompleteModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   declarations: []
 })

@@ -15,7 +15,9 @@ import { CadastroClienteComponent } from './telas/cadastro-cliente/cadastro-clie
 import {AppRoutingModule} from './shared/routes/app-routing.module';
 import { CadastroClienteService } from './telas/cadastro-cliente/cadastro-cliente.service';
 import {MatListModule} from '@angular/material/list';
-import { CarouselModule } from 'ngx-bootstrap'
+import { CarouselModule } from 'ngx-bootstrap';
+import { FooterComponent } from './layout/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { CarouselModule } from 'ngx-bootstrap'
     SolicitarCartaoComponent,
     GraficosComponent,
     CadastroClienteComponent,
+    FooterComponent,
     QuemSomosComponent
   ],
   imports: [
@@ -36,7 +39,8 @@ import { CarouselModule } from 'ngx-bootstrap'
     FormsModule,
     AppRoutingModule,
     MatListModule,
-    CarouselModule
+    CarouselModule,
+    HttpClientModule
   ],
   providers: [
     CadastroClienteService
