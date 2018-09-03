@@ -13,6 +13,7 @@ import { PrimeNGModule } from './shared/modulos-compartilhados/primeng/primeng.m
 import { CadastroClienteComponent } from './telas/cadastro-cliente/cadastro-cliente.component';
 import {AppRoutingModule} from './shared/routes/app-routing.module';
 import { CadastroClienteService } from './telas/cadastro-cliente/cadastro-cliente.service';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CadastroClienteService } from './telas/cadastro-cliente/cadastro-client
     CartoesComponent,
     SolicitarCartaoComponent,
     GraficosComponent,
-    CadastroClienteComponent
+    CadastroClienteComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
