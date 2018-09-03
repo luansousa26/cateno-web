@@ -14,6 +14,7 @@ import { PrimeNGModule } from './shared/modulos-compartilhados/primeng/primeng.m
 import { CadastroClienteComponent } from './telas/cadastro-cliente/cadastro-cliente.component';
 import {AppRoutingModule} from './shared/routes/app-routing.module';
 import { CadastroClienteService } from './telas/cadastro-cliente/cadastro-cliente.service';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CadastroClienteService } from './telas/cadastro-cliente/cadastro-client
     AngularMaterialModule,
     PrimeNGModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatListModule
   ],
   providers: [
     CadastroClienteService
