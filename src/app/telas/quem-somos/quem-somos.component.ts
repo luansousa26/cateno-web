@@ -9,15 +9,24 @@ import {DOCUMENT} from '@angular/platform-browser';
 })
 
 export class QuemSomosComponent implements OnInit {
-
+  noWrapSlides = false;
   constructor(@Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit() {
+
   }
   @HostListener('window:scroll', [])
   scrollAnimate() {
+    console.log(window.pageYOffset);
+
     if (window.pageYOffset > 216 ) {
       document.getElementById('mat-card').classList.add('fadeInLeft');
+    }
+    if (window.pageYOffset > 637 ) {
+      document.getElementById('hist').classList.add('fadeInUp');
+    }
+    if (window.pageYOffset > 756 ) {
+      document.querySelector('.carousel').classList.add('rollIn');
     }
   }
 }

@@ -2,14 +2,14 @@
 
   <div class="row">
     <div class="col-sm-4"></div>
-    <div id="notification" class="col-sm-4 fadeInDown"><h3>Missão, Visão e Valores</h3></div>
+    <div class="col-sm-4 fadeInDown notification"><h3>Missão, Visão e Valores</h3></div>
     <div class="col-sm-4"></div>
   </div>
 
   <mat-card class="fadeInLeft">
     <div class="row">
       <div class="col-sm-4">
-        <img class="missao" src="http://www.cateno.com.br/wp-content/uploads/2018/08/Cateno_QuemSomos_Missao.jpg">
+        <img class="missao responsive" src="http://www.cateno.com.br/wp-content/uploads/2018/08/Cateno_QuemSomos_Missao.jpg">
       </div>
       <div class="col-sm-2"></div>
       <div class="col-sm-6">
@@ -24,7 +24,7 @@
   <mat-card class="fadeInRight">
     <div class="row">
       <div class="col-sm-4">
-        <img class="missao" src="http://www.cateno.com.br/wp-content/uploads/2018/08/Cateno_QuemSomos_Visao.jpg">
+        <img class="missao responsive" src="http://www.cateno.com.br/wp-content/uploads/2018/08/Cateno_QuemSomos_Visao.jpg">
       </div>
       <div class="col-sm-2"></div>
       <div class="col-sm-6">
@@ -40,7 +40,7 @@
   <mat-card id="mat-card">
     <div class="row">
       <div class="col-sm-4">
-        <img class="missao" src="http://www.cateno.com.br/wp-content/uploads/2018/08/Cateno_QuemSomos_Valores.jpg">
+        <img class="missao responsive" src="http://www.cateno.com.br/wp-content/uploads/2018/08/Cateno_QuemSomos_Valores.jpg">
       </div>
       <div class="col-sm-2"></div>
       <div class="col-sm-6">
@@ -61,6 +61,63 @@
     </div>
   </mat-card>
 
-  <div id="historia" class="col-sm-4 fadeInDown"><h3>Nossa História</h3></div>
+  <div id="hist" class="col-sm-4 notification"><h3>Nossa História</h3></div>
+    <carousel id="carousel" [noWrap]="noWrapSlides">
+      <slide>
+        <mat-card class="item-car">
+        <div class="row">
+            <div class="col-sm-4">
+              <h3>Novembro 2014</h3>
+              Anúncio da criação da Token Gestão de Contas de Pagamento S.A.,<i>joint venture</i>
+              entre Banco do Brasil (BB), por meio da BB Elo Cartões, e Cielo para atuar como provedora de soluções na gestão de contas de pagamento.
+              A composição do capital da sociedade foi dividida em 30% para o BB Elo Cartões, subsidiária integral do BB, e 70% para a Cielo.
+            </div>
+            <div class="col-sm-4">
+              <h3>Dezembro 2014</h3>
+              O Banco Central do Brasil (BACEN) autoriza participação societária da BB Elo Cartões e da Cielo na Token
+              Gestão de Contas de Pagamento S.A. A sociedade também é aprovada no CADE.
+            </div>
+          <div class="col-sm-4">
+          <h3>Fevereiro 2015</h3>
+          Após a aprovação dos órgãos reguladores,
+          o Banco do Brasil concede à Token os direitos de exploração das atividades de gestão de contas de
+          pagamentos pós-pagas e da funcionalidade de compra via débito no âmbito do Ourocard.
+          A operação tem entre seus objetivos realizar associações com outros parceiros para aproveitar
+          oportunidades no mercado de meios eletrônicos de pagamento.
+        </div>
+        </div>
+        </mat-card>
+      </slide>
+      <slide>
+        <mat-card class="item-car">
+        <div class="row">
+          <div class="col-sm-4">
+              <h3>Maio 2015</h3>
+              A parceria entre BB e Cielo passa a ser chamar
+              <strong>Cateno Gestão de Contas de Pagamento S.A.</strong>
+              Desenvolvida pela FutureBrand, consultoria multinacional de estratégia de branding,
+              a nova marca personifica os principais atributos da
+              <strong>Cateno</strong>
+              : solidez, eficiência, inovação, tecnologia e inclusão.
+            </div>
+            <div class="col-sm-4">
+              <h3>Maio 2018</h3>
+              A <strong>Cateno</strong> é a mais nova emissora de cartões pré-pago da bandeira Elo.
+              Atuando de modo complementar ao Banco do Brasil, a nova operação da <strong>Cateno</strong>
+              será fundamental para apoiar o processo de bancarização de grande parte da população brasileira.
+            </div>
+            <div class="col-sm-4">
+            <h3>Novembro 2014</h3>
+            Anúncio da criação da Token Gestão de Contas de Pagamento S.A.,<i>joint venture</i>
+            entre Banco do Brasil (BB), por meio da BB Elo Cartões, e Cielo para atuar como provedora de soluções na gestão de contas de pagamento.
+            A composição do capital da sociedade foi dividida em 30% para o BB Elo Cartões, subsidiária integral do BB, e 70% para a Cielo.
+          </div>
+        </div>
+        </mat-card>
+      </slide>
+    </carousel>
+
+  <br><br><br>
+
 
 </div>
