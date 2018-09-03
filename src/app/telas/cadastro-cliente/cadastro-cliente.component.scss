@@ -4,3 +4,18 @@
 #group{
     margin-top: 9px;
 }
+.mat-button-toggle-checked{
+    background: #b2d135;
+    color: white;
+}
+
+@media only screen and(max-width: 1350px){
+    .toogle-responsivo {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+.row{
+     margin-right: 0px; 
+    margin-left: 0px;
+}

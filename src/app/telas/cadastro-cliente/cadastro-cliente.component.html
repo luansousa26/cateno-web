@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-2 col-sm-12">
     </div>
-    <div class="col-md-8 col-sm-12" id="cateno-cadastro">
+    <div class="col-md-9 col-sm-12" id="cateno-cadastro">
       <mat-card>
         <div>
           <div><span> Informações pessoais</span></div>
@@ -13,10 +13,9 @@
                   required>
               </mat-form-field>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-4 col-sm-6">
               <mat-form-field class="full-width">
-                <input name="campo-data-nascimento" matInput [(ngModel)]="dadosPessoais.nome" maxlength="100" placeholder="Data de nascimento"
-                  required>
+                <input name="campo-apelido" matInput [(ngModel)]="dadosPessoais.apelido" maxlength="50" placeholder="Apelido">
               </mat-form-field>
             </div>
             <div class="col-md-8 col-sm-12">
@@ -30,24 +29,46 @@
                 <input name="campo-cpf" matInput [(ngModel)]="dadosPessoais.cpf" minlength="14" maxlength="14" placeholder="CPF" required>
               </mat-form-field>
             </div>
-            <div class="col-md-5 col-sm-6">
-                <div id="group" class="full-width">
-                    <mat-button-toggle-group [(ngModel)]="dadosPessoais.sexo" #group="matButtonToggleGroup">
-                        <mat-button-toggle value="M">
-                          <span>Masculino</span>
-                        </mat-button-toggle>
-                        <mat-button-toggle value="F">
-                          <span>Feminino</span>
-                        </mat-button-toggle>
-                      </mat-button-toggle-group>
+
+            <div id="group" class="col-md-4 col-sm-12">
+              <mat-button-toggle-group [(ngModel)]="dadosPessoais.sexo" #group="matButtonToggleGroup">
+                <div class="row">
+                    <mat-button-toggle class="col-md-6 col-sm-12" value="M">
+                      <span>Masculino</span>
+                    </mat-button-toggle>
+                    <mat-button-toggle class="col-md-6 col-sm-12" value="F">
+                      <span>Feminino</span>
+                    </mat-button-toggle>
                 </div>
-              </div>
-              <div class="col-md-4 col-sm-6">
-                  <mat-form-field class="full-width">
-                      <input name="campo-apelido" matInput [(ngModel)]="dadosPessoais.apelido" maxlength="50" placeholder="Apelido">
-                    </mat-form-field>
-                  </div>
-            
+              </mat-button-toggle-group>
+            </div>
+            <div id="group" class="col-md-8 col-sm-12">
+              <mat-button-toggle-group [(ngModel)]="dadosPessoais.sexo" #group="matButtonToggleGroup">
+                <div class="row">
+                  <mat-button-toggle class="toogle-responsivo" value="SOLTEIRO">
+                    <span>Solteiro(a)</span>
+                  </mat-button-toggle>
+                  <mat-button-toggle class="toogle-responsivo" value="CASADO">
+                    <span>Casado(a)</span>
+                  </mat-button-toggle>
+                  <mat-button-toggle class="toogle-responsivo" value="CASADO">
+                    <span>Separado(a)</span>
+                  </mat-button-toggle>
+                  <mat-button-toggle class="toogle-responsivo" value="CASADO">
+                    <span>Divorciado(a)</span>
+                  </mat-button-toggle>
+                  <mat-button-toggle class="toogle-responsivo" value="CASADO">
+                    <span>Viúvo(a)</span>
+                  </mat-button-toggle>
+                </div>
+              </mat-button-toggle-group>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <mat-form-field class="full-width">
+                <input name="campo-data-nascimento" matInput [(ngModel)]="dadosPessoais.nome" maxlength="100" placeholder="Data de nascimento"
+                  required>
+              </mat-form-field>
+            </div>
           </div>
         </div>
       </mat-card>
