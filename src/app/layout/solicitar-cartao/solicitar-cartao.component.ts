@@ -16,7 +16,7 @@ export class SolicitarCartaoComponent implements OnInit {
   dadosPessoais: DadosPessoais;
   nomeCartao: string;
   estadoCpf = true;
-  focusEmail = true;
+  estadoEmail = true;
   constructor(private router: Router,
     private service: CadastroClienteService) {
     this.dadosPessoais = new DadosPessoais();
@@ -32,7 +32,7 @@ export class SolicitarCartaoComponent implements OnInit {
   }
 
   public validarEmail(): void {
-    this.focusEmail = new RegExp(Enums.EMAIL).test(this.dadosPessoais.email) ? true : false;
+    this.estadoEmail = new RegExp(Enums.EMAIL).test(this.dadosPessoais.email) ? true : false;
   }
 
   public apenasNumeros(teclaPressionada: KeyboardEvent): boolean {
