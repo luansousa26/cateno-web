@@ -1,0 +1,110 @@
+img{
+    width: 100%;
+    max-height: 500px;
+}
+#titulo-cartao{
+    padding-top: 17%;
+    font-size: 21px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color:#545454;
+}
+#texto-cartao{
+    color:#545454;
+    padding-top: 4%;
+    padding-bottom: 4px;
+    font-size: 14px;
+}
+.blue{
+    background: #3498db;
+}
+#home{
+    padding-top: 6.5%;
+}
+#btn-saber-mais{
+    background: #b2d135;
+    color: white;
+    font-weight: bold;
+    padding: 13px 34px 14px;
+    border-radius: 60px;
+    border: solid 1px white;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+#btn-saber-mais:hover {
+    text-shadow: 1px 2px 4px #0d0e0f;
+    background: #c0f002;
+    border-radius: 0px;
+  }
+
+
+#button-content{
+    padding-top: 13px;
+}
+
+
+@media only screen and (max-width: 577px) {
+    #home{
+        padding-top: 22%;
+    }
+}
+
+.notification {
+  width: 87%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+}
+
+mat-card{
+  margin-top: 42px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 750px;
+  height: 500px;
+  max-height: 700px;
+}
+
+.missao{
+  width: 455px;
+  height: 270px;
+  border: 1px solid transparent;
+  border-radius: 5%;
+}
+
+#home {
+  background-image: url("../../../assets/background.jpg");
+  background-repeat: repeat-x;
+  background-size: cover!important;
+}
+
+#carousel{
+  width: 90vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.scroll-1{
+  display: none!important;
+  visibility: hidden!important;
+}
+
+:host /deep/ .carousel-control-next-icon{
+  background-image: url("../../../assets/angle-right-solid.svg");
+  margin-top: 250px;
+  height: 60px;
+}
+
+:host /deep/ .carousel-control-prev-icon{
+  background-image: url("../../../assets/angle-left-solid.svg");
+  margin-top: 250px;
+  height: 60px;
+}
+
+:host /deep/ .carousel{
+  text-align: center;
+  font-size: 14px;
+  margin-top: 55px;
+}
