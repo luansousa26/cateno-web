@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   menuvisivel = false;
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }
-  mostrarMenu() {
+  public mostrarMenu(): void {
     if (this.menuvisivel === false) {
       this.abrirMenu();
     } else {
@@ -20,7 +21,7 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  abrirMenu() {
+  private abrirMenu(): void {
     document.getElementById('menu-hide').style.background = 'rgba(163, 206, 34, 0.541)';
     document.getElementById('espacamento').style.height = '130px';
     document.getElementById('menu-hide').style.height = '350px';
@@ -30,7 +31,7 @@ export class NavbarComponent implements OnInit {
     }, 4000);
     this.menuvisivel = true;
   }
-  fecharMenu() {
+  private fecharMenu(): void {
     document.getElementById('menu-hide').style.background = 'rgba(163, 206, 34, 0.541)';
     document.getElementById('menu-hide').style.height = '2px';
     document.getElementById('menu-hide').style.transition = 'height 4s ease-out';

@@ -20,6 +20,20 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
         ])),
       ]),
     ]),
+    trigger('cartoes', [
+      state('inactive', style({
+        marginLeft: '400px',
+        opacity: '0'
+      })),
+      transition('inactive => active', [
+        animate(6000, keyframes([
+          style({
+            marginLeft: '0px',
+            opacity: '1 '
+          }),
+        ])),
+      ]),
+    ]),
   ]
 })
 
