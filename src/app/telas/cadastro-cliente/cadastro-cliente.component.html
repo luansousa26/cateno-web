@@ -52,8 +52,8 @@
                 </div>
                 <div class="col-md-2 col-sm-6">
                   <mat-form-field class="full-width">
-                    <input name="campo-rg" matInput [(ngModel)]="dadosPessoais.rg" (keypress)="apenasNumeros($event)" maxlength="12" placeholder="RG"
-                    pattern="[0-9]+" required>
+                    <input name="campo-rg" matInput [(ngModel)]="dadosPessoais.rg" maxlength="14" placeholder="RG"
+                    pattern="[0-9]+|[x]" required>
                   </mat-form-field>
                 </div>
                 <div class="col-md-3 col-sm-6">
