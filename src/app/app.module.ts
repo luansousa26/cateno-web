@@ -25,6 +25,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { CadastroClienteComponent } from './telas/cadastro-cliente/cadastro-cliente.component';
 import { SolicitarCartaoComponent } from './layout/solicitar-cartao/solicitar-cartao.component';
 import {InteligenciaFraudeComponent} from './telas/solucoes/inteligencia-fraude/inteligencia-fraude.component';
+import { DialogoCartaoComponent } from './telas/cadastro-cliente/dialog-cartao/dialogo-cartao.component';
 
 // Services Imports
 import { CadastroClienteService } from './telas/cadastro-cliente/cadastro-cliente.service';
@@ -42,7 +43,8 @@ import { CadastroClienteService } from './telas/cadastro-cliente/cadastro-client
     QuemSomosComponent,
     SocialComponent,
     ContatoComponent,
-    InteligenciaFraudeComponent
+    InteligenciaFraudeComponent,
+    DialogoCartaoComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +58,9 @@ import { CadastroClienteService } from './telas/cadastro-cliente/cadastro-client
     HttpClientModule,
     MatInputModule,
     MatButtonModule
+  ],
+  entryComponents: [
+    DialogoCartaoComponent
   ],
   providers: [
     CadastroClienteService

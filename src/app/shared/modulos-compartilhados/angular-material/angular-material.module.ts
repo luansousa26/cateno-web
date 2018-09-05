@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule, LOCALE_ID } from '@angular/core';
+import { CommonModule, registerLocaleData } from '@angular/common';
 import {
   MatToolbarModule,
   MatCardModule,
@@ -9,8 +9,11 @@ import {
   MatButtonToggleModule,
   MatAutocompleteModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatDialogModule
 } from '@angular/material';
+import localePt from '@angular/common/locales/pt';
+registerLocaleData(localePt);
 @NgModule({
   imports: [
     CommonModule
@@ -24,7 +27,11 @@ import {
     MatButtonToggleModule,
     MatAutocompleteModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatDialogModule
+  ],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt-BR' }    
   ],
   declarations: []
 })
