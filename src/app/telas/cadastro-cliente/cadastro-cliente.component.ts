@@ -141,11 +141,25 @@ export class CadastroClienteComponent implements OnInit {
           this.dadosPessoais.telefone = Validacoes.validarMascaraTelefoneFixo(this.dadosPessoais.telefone);
           break;
         case 'C':
-          this.dadosPessoais.celular = Validacoes.validarMascaraTelefoneFixo(this.dadosPessoais.celular);
+          this.dadosPessoais.celular = Validacoes.validarMascaraTelefoneCelular(this.dadosPessoais.celular);
           break;
       }
     } else {
       return false;
     }
+  }
+  public validarMascaraTelefone(tipoTelefone: string): void {
+    switch (tipoTelefone) {
+      case 'F':
+        this.dadosPessoais.telefone = Validacoes.validarCampoTelefone(this.dadosPessoais.telefone);
+        break;
+      case 'C':
+        this.dadosPessoais.celular = Validacoes.validarCampoTelefone(this.dadosPessoais.celular);
+        break;
+    }
+  }
+
+  public solicitarCartao(): void {
+    console.log(this.dadosPessoais);
   }
 }

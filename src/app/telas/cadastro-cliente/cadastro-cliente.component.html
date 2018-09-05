@@ -52,8 +52,8 @@
                 </div>
                 <div class="col-md-2 col-sm-6">
                   <mat-form-field class="full-width">
-                    <input name="campo-rg" matInput [(ngModel)]="dadosPessoais.rg" (keydown)="apenasNumeros($event)" maxlength="12" placeholder="RG"
-                      required>
+                    <input name="campo-rg" matInput [(ngModel)]="dadosPessoais.rg" (keypress)="apenasNumeros($event)" maxlength="12" placeholder="RG"
+                    pattern="[0-9]+" required>
                   </mat-form-field>
                 </div>
                 <div class="col-md-3 col-sm-6">
@@ -189,13 +189,13 @@
               <div class="row">
                 <div class="col-md-2 col-sm-6">
                   <mat-form-field class="full-width">
-                    <input name="campo-telefone" matInput [(ngModel)]="dadosPessoais.telefone" (keypress)="validarTelefone($event,'F');" maxlength="13"
+                    <input name="campo-telefone" matInput [(ngModel)]="dadosPessoais.telefone" (focusout)="validarMascaraTelefone('F')" (keypress)="validarTelefone($event,'F');" maxlength="13"
                       placeholder="Telefone" required>
                   </mat-form-field>
                 </div>
                 <div class="col-md-2 col-sm-6">
                   <mat-form-field class="full-width">
-                    <input name="campo-celular" matInput [(ngModel)]="dadosPessoais.celular" (keypress)="validarTelefone($event,'C');" maxlength="14"
+                    <input name="campo-celular" matInput [(ngModel)]="dadosPessoais.celular" (focusout)="validarMascaraTelefone('C')" (keypress)="validarTelefone($event,'C');" maxlength="14"
                       placeholder="Celular" required>
                   </mat-form-field>
                 </div>

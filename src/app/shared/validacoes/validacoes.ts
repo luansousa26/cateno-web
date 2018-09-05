@@ -102,21 +102,10 @@ export class Validacoes {
         return telefone;
     }
 
-    public static validarCampoTelefone(telefone: string, tipoTelefone: string): string {
-
-        if (telefone) {
-            switch (tipoTelefone) {
-                case 'F':
-                    if (telefone.length < 13) {
-                        return telefone = null;
-                    }
-                    break;
-                case 'C':
-                    if (telefone.length < 14) {
-                        return telefone = null;
-                    }
-                    break;
-            }
+    public static validarCampoTelefone(telefone: string): string {
+        const validacao = new RegExp('^(\([0-9]{2}\))([9]{1})|([0-9]{4})-([0-9]{4})$').test(telefone);
+        if (!validacao) {
+            return null;
         }
         return telefone;
     }
