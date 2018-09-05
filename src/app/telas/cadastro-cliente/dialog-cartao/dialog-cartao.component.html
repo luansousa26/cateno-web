@@ -1,0 +1,23 @@
+<div id="cartao-solicitado">
+    <div class="cor-texto">
+        <div *ngIf="!dadosPessoais.apelido" id="cliente-nome">
+            <h1>Parábens {{dadosPessoais?.nome}} seu Cartão Cateno foi solicitado!</h1>
+            <div class="icone">
+                <img src="assets/icones/cara-feliz.png">
+            </div>
+        </div>
+        <div *ngIf="dadosPessoais.apelido" id="cliente-apelido">
+            <h1>Parábens {{dadosPessoais?.apelido}} seu cartão Cateno solicitado!</h1>
+            <div class="icone">
+                <img src="assets/icones/cara-feliz.png">
+            </div>
+        </div>
+        <div id="texto-informativo">
+            <span>Aguarde nosso contato por telefone {{dadosPessoais?.telefone}} {{dadosPessoais?.celular}} ou por e-mail
+                {{dadosPessoais?.email}}.
+            </span>
+        </div>
+        <div id="div-btn"><button (click)="fecharDialog()"  id="btn-entendi"
+            mat-raised-button>OK Entendi!</button></div>
+    </div>
+</div>

@@ -3,17 +3,18 @@ import { CadastroClienteService } from './cadastro-cliente.service';
 import { DadosPessoais } from '../../shared/models/dados-pessoais.model';
 import { itemsFiltro } from '../../shared/models/items-filtro-model';
 import { AutocompleteFuncoes } from '../../shared/funcoes/autocomplete-funcoes';
-import { MAT_DATE_LOCALE } from '@angular/material';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { Endereco } from '../../shared/models/endereco.model';
 import { Enums } from '../../shared/enums/enums';
 import { Validacoes } from '../../shared/validacoes/validacoes';
+import { DialogoCartaoComponent } from './dialog-cartao/dialogo-cartao.component';
+import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material';
+
 @Component({
   selector: 'app-cadastro-cliente',
   templateUrl: './cadastro-cliente.component.html',
-  styleUrls: ['./cadastro-cliente.component.scss'],
-  providers: [
-    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
-  ]
+  styleUrls: ['./cadastro-cliente.component.scss']
 })
 export class CadastroClienteComponent implements OnInit {
 
@@ -32,7 +33,9 @@ export class CadastroClienteComponent implements OnInit {
   estadoEmail = true;
   animacao = 'false';
 
-  constructor(private service: CadastroClienteService) {
+  constructor(private service: CadastroClienteService,
+    public dialog: MatDialog,
+    private router: Router) {
     this.dadosPessoais = new DadosPessoais();
     this.dadosPessoais.endereco = new Endereco();
   }
@@ -42,14 +45,8 @@ export class CadastroClienteComponent implements OnInit {
     this.preencherOrgaos();
     this.preencherNacionalidades();
     this.carregarDados();
-    this.iniciarAnimacao();
   }
 
-  private iniciarAnimacao(): void {
-    setTimeout(() => {
-      this.animacao = 'true';
-    }, 300);
-  }
   private carregarDados(): void {
     if (this.service.devolverDados()) {
       this.dadosPessoais = this.service.devolverDados();
@@ -161,5 +158,18 @@ export class CadastroClienteComponent implements OnInit {
 
   public solicitarCartao(): void {
     console.log(this.dadosPessoais);
+    this.openDialog(this.dadosPessoais);
   }
+
+  private openDialog(dadosPessoais: DadosPessoais): void {
+    const dialogRef = this.dialog.open(DialogoCartaoComponent, {
+      data: dadosPessoais,
+      panelClass: 'my-full-screen-dialog',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.router.navigate(['/home']);
+    });
+  }
+  
 }

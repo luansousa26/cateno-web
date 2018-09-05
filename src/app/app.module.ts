@@ -18,6 +18,7 @@ import {MatListModule} from '@angular/material/list';
 import { CarouselModule } from 'ngx-bootstrap';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DialogoCartaoComponent } from './telas/cadastro-cliente/dialog-cartao/dialogo-cartao.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     GraficosComponent,
     CadastroClienteComponent,
     FooterComponent,
-    QuemSomosComponent
+    QuemSomosComponent,
+    DialogoCartaoComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     CarouselModule,
     HttpClientModule
+  ],
+  entryComponents: [
+    DialogoCartaoComponent
   ],
   providers: [
     CadastroClienteService
