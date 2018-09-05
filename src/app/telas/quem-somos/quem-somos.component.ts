@@ -1,5 +1,6 @@
-import { Component, OnInit, Inject, HostListener } from '@angular/core';
+import {Component, OnInit, Inject, HostListener, AfterViewChecked, ElementRef} from '@angular/core';
 import {DOCUMENT} from '@angular/platform-browser';
+import {Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-quem-somos',
@@ -10,11 +11,12 @@ import {DOCUMENT} from '@angular/platform-browser';
 
 export class QuemSomosComponent implements OnInit {
   noWrapSlides = false;
-  constructor(@Inject(DOCUMENT) private document: Document) { }
-
-  ngOnInit() {
+  constructor(@Inject(DOCUMENT) private document: Document) {
 
   }
+  ngOnInit() {
+  }
+
   @HostListener('window:scroll', [])
   scrollAnimate() {
     console.log(window.pageYOffset);
@@ -27,6 +29,9 @@ export class QuemSomosComponent implements OnInit {
     }
     if (window.pageYOffset > 756 ) {
       document.querySelector('.carousel').classList.add('rollIn');
+    }
+    if (window.pageYOffset > 1080 ) {
+      document.querySelector('.footer').classList.add('fadeInUp');
     }
   }
 }

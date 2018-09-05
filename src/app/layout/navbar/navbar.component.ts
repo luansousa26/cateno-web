@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
+  drop = false;
   menuvisivel = false;
   constructor(public router: Router) { }
 
@@ -44,5 +44,10 @@ export class NavbarComponent implements OnInit {
     setTimeout(() => {
       document.getElementById('menu-hide').style.background = 'transparent';
     }, 4000);
+  }
+  showDrop() {
+    if (this.drop === true) {
+      this.drop = false;
+    } else {this.drop = true; }
   }
 }
