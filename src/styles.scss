@@ -192,11 +192,12 @@ a:hover{
 .default:hover {
   background: linear-gradient(to right, rgb(250, 249, 249) 50%, #01aab4 50% );
   color: white;
-  background-size: 300% 100%;
+  background-size: 400% 100%;
   background-position: right bottom;
   transition: all 2.0s ease-out;   
 }
 .default:disabled {
+  cursor: not-allowed !important;
   border: none !important;
   background: rgba(0, 0, 0, 0.199);
 }
@@ -210,11 +211,12 @@ a:hover{
 .submit:hover {
   background: linear-gradient(to right, rgb(250, 249, 249) 50%, #b2d135 50% );
   color: white;
-  background-size: 300% 100%;
+  background-size: 400% 100%;
   background-position: right bottom;
   transition: all 2.0s ease-out;   
 }
 .submit:disabled {
+  cursor: not-allowed !important;
   border: none !important;
   background: rgba(0, 0, 0, 0.199);
 }
@@ -228,11 +230,12 @@ a:hover{
 .cancel:hover {
   background: linear-gradient(to right, rgb(250, 249, 249) 50%, #e74c3c 50% );
   color: white;
-  background-size: 300% 100%;
+  background-size: 400% 100%;
   background-position: right bottom;
   transition: all 2.0s ease-out;   
 }
 .cancel:disabled {
+  cursor: not-allowed !important;
   border: none !important;
   background: rgba(0, 0, 0, 0.199);
 }
