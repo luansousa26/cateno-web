@@ -171,24 +171,68 @@ a:hover{
 }
 
 
+/* BOTÕES */
 
 
-/* Botão padrão para ação */
-.btn-padrao{
+/* Estrutura básica do botão */
+.btn{
   background: transparent;
-  color: #01aab4;
   font-weight: bold !important;
   padding: 8px 34px 7px !important;
-  border: solid 2px #01aab4 !important;
   border-radius: 7% !important;
   cursor: pointer !important;
   transition: all 1s ease-in-out !important;
 }
 
-.btn-padrao:hover {
+/* Botão padrão Azul */
+.default{
+  color: #01aab4;
+  border: solid 2px #01aab4 !important;
+}
+.default:hover {
   background: linear-gradient(to right, rgb(250, 249, 249) 50%, #01aab4 50% );
   color: white;
   background-size: 300% 100%;
   background-position: right bottom;
   transition: all 2.0s ease-out;   
+}
+.default:disabled {
+  border: none !important;
+  background: rgba(0, 0, 0, 0.199);
+}
+
+
+/* Botão para a submissão de form's */
+.submit {
+  color: #b2d135;
+  border: solid 2px #b2d135 !important;
+}
+.submit:hover {
+  background: linear-gradient(to right, rgb(250, 249, 249) 50%, #b2d135 50% );
+  color: white;
+  background-size: 300% 100%;
+  background-position: right bottom;
+  transition: all 2.0s ease-out;   
+}
+.submit:disabled {
+  border: none !important;
+  background: rgba(0, 0, 0, 0.199);
+}
+
+
+/* Botão para o cancelamento/ limpar dados */
+.cancel {
+  color: #e74c3c;
+  border: solid 2px #e74c3c !important;
+}
+.cancel:hover {
+  background: linear-gradient(to right, rgb(250, 249, 249) 50%, #e74c3c 50% );
+  color: white;
+  background-size: 300% 100%;
+  background-position: right bottom;
+  transition: all 2.0s ease-out;   
+}
+.cancel:disabled {
+  border: none !important;
+  background: rgba(0, 0, 0, 0.199);
 }

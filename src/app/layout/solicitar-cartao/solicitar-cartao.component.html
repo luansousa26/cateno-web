@@ -32,8 +32,9 @@
                 </div>
               </div>
 
-              <div align="center"><button (click)="solicitarCartao()" [disabled]="soliciCard.invalid || !estadoCpf || !estadoEmail" id="btn-solicitar" class="btn-padrao"
-                  mat-raised-button>Prosseguir</button></div>
+              <div align="center"><button (click)="solicitarCartao()" [disabled]="soliciCard.invalid || !estadoCpf || !estadoEmail"
+                  id="btn-solicitar" class="btn submit" mat-raised-button>Prosseguir</button>
+                <button [disabled]="!soliciCard.dirty" (click)="soliciCard.resetForm();" class="btn cancel" mat-raised-button>Cancelar</button></div>
             </form>
           </mat-card>
         </div>
