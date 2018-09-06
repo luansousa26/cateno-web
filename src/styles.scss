@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 $cor-background: rgba(245,245,245,1);
+$padrao-azul: #00aab5;
+$padrao-verde:  #b2d235;
+
+
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 * {
     margin:0;
@@ -29,11 +33,11 @@ $cor-background: rgba(245,245,245,1);
 }
 
 @-webkit-keyframes fadeInLeft{
-  from{opacity:1;
+  from{
     -webkit-transform:translate3d(-100%,0,0);
     transform:translate3d(-100%,0,0);
   }
-  to{opacity:0.8;
+  to{
     -webkit-transform:translate3d(0,0,0);
     transform:translate3d(0,0,0);
   }
@@ -103,21 +107,18 @@ $cor-background: rgba(245,245,245,1);
   -webkit-animation-name:fadeInDown;
   animation-name:fadeInDown;
   animation-duration: 2s;
-  opacity:0.8;
 }
 
 .fadeInLeft{
   -webkit-animation-name:fadeInLeft;
   animation-name:fadeInLeft;
   animation-duration: 2s;
-  opacity:0.8;
 }
 
 .fadeInRight{
   -webkit-animation-name:fadeInRight;
   animation-name:fadeInRight;
   animation-duration: 2s;
-  opacity:0.8;
 }
 
 .fadeInUp{
@@ -167,7 +168,7 @@ a{
 }
 
 a:hover{
-  color: #01aab4;
+  color: $padrao-azul;
 }
 
 
@@ -178,19 +179,18 @@ a:hover{
 .btn{
   background: transparent;
   font-weight: bold !important;
-  padding: 8px 34px 7px !important;
-  border-radius: 7% !important;
+  border-radius: 4px !important;
   cursor: pointer !important;
-  transition: all 1s ease-in-out !important;
+  transition: all 1.2s ease-in-out !important;
 }
 
 /* Botão padrão Azul */
 .default{
-  color: #01aab4;
-  border: solid 2px #01aab4 !important;
+  color: $padrao-azul;
+  border: solid 2px $padrao-azul !important;
 }
 .default:hover {
-  background: linear-gradient(to right, rgb(250, 249, 249) 50%, #01aab4 50% );
+  background: linear-gradient(to right, rgb(250, 249, 249) 50%, $padrao-azul 50% );
   color: white;
   background-size: 400% 100%;
   background-position: right bottom;
@@ -205,11 +205,11 @@ a:hover{
 
 /* Botão para a submissão de form's */
 .submit {
-  color: #b2d135;
-  border: solid 2px #b2d135 !important;
+  color: $padrao-verde;
+  border: solid 2px $padrao-verde !important;
 }
 .submit:hover {
-  background: linear-gradient(to right, rgb(250, 249, 249) 50%, #b2d135 50% );
+  background: linear-gradient(to right, rgb(250, 249, 249) 50%, $padrao-verde 50% );
   color: white;
   background-size: 400% 100%;
   background-position: right bottom;

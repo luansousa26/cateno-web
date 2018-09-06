@@ -1,5 +1,6 @@
 #cartoes{
     margin-top:10px;
+    height: 550px;
 }
 
 .cartao {
@@ -12,7 +13,7 @@
 /*  imagens */
 img{
     width: 312px;
-    height: 400px;
+    height: auto;
 }
 
 #linha{
@@ -26,4 +27,18 @@ img{
 .col-sm-12{
     padding-right: 0px;
     padding-left: 0px;
+}
+#iphone-imagem{
+    padding-top: 10px;
+    transition: 2s;
+}
+.icons{
+    width: 130px;
+    height: auto;
+}
+#row-icons{
+    margin-top: 70px;
+}
+.texto-icons{
+    margin-top: 20px;
 }

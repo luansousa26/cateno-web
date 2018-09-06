@@ -1,8 +1,8 @@
-$cor-cateno-azul: #01aab4;
-
+$cor-cateno-azul: #00aab5;
+$cor-padrao-cinza:#77787b;
 mat-toolbar{
     background: #ffffff;
-    color: #343434;
+    color: $cor-padrao-cinza;
     font-weight: bold;
     position: fixed;
     z-index: 10000;
@@ -36,7 +36,7 @@ li{
     margin-top: 23px;
     margin-left: 25%;
     font-size: 17px;
-    color:#545454;
+    color: $cor-padrao-cinza;
     
 }
 
@@ -166,7 +166,7 @@ li{
     display: none;
     float: right;
     margin-top: 42px;
-    color:#6f6f6f;
+    color:$cor-padrao-cinza;
     cursor: pointer;
     transition: 1s;
 }
