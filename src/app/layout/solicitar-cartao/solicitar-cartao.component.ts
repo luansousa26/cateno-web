@@ -16,7 +16,7 @@ export class SolicitarCartaoComponent implements OnInit {
   dadosPessoais: DadosPessoais;
   nomeCartao: string;
   estadoCpf = true;
-  estadoEmail = true;
+  estadoEmail: boolean;
   constructor(private router: Router,
     private service: CadastroClienteService) {
     this.dadosPessoais = new DadosPessoais();

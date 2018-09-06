@@ -54,23 +54,6 @@ img:hover{
     font-size: 17px;
     color:#c9c9c9;
 }
-
-
-#btn-solicitar{
-    background: #b2d135;
-    color: white;
-    font-weight: bold;
-    padding: 13px 34px 14px;
-    border-radius: 60px;
-    border: solid 1px white;
-    cursor: pointer;
-    transition: all 1s ease-in-out;
-}
-
-#btn-solicitar:hover {
-    text-shadow: 1px 2px 4px #0d0e0f;
-    border-radius: 0px;
-  }
   @media only screen and (max-width:768px) {
     #beneficios{
         padding-right: 70px;

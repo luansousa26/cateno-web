@@ -1,4 +1,4 @@
-$cor-cateno-verde: #A4CE22;
+$cor-cateno-azul: #01aab4;
 
 mat-toolbar{
     background: #ffffff;
@@ -6,7 +6,8 @@ mat-toolbar{
     font-weight: bold;
     position: fixed;
     z-index: 10000;
-    height: 90px;
+    height: 73px;
+    box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.075);
 }
 mat-toolbar-row{
     height: 70px;
@@ -18,7 +19,7 @@ img{
 }
 #logo-cateno{
     margin-left: 30px;
-    margin-top: 15px;
+    margin-top: 2px;
 }
 li{
     float: left;
@@ -32,7 +33,7 @@ li{
     display: inline-block;
 }
 #menu{
-    margin-top: 40px;
+    margin-top: 23px;
     margin-left: 25%;
     font-size: 17px;
     color:#545454;
@@ -56,7 +57,7 @@ li{
     0%{
         width: 0;
         height: 0;
-        border-top-color: $cor-cateno-verde;
+        border-top-color: $cor-cateno-azul;
         border-right-color: transparent;
         border-bottom-color: transparent;
         border-left-color: transparent;
@@ -64,16 +65,16 @@ li{
     50%{
         width: 100%;
         height: 0;
-        border-top-color: $cor-cateno-verde;
-        border-right-color: $cor-cateno-verde;
+        border-top-color: $cor-cateno-azul;
+        border-right-color: $cor-cateno-azul;
         border-bottom-color: transparent;
         border-left-color: transparent;
     }
     100%{
         width: 100%;
         height: 100%;
-        border-top-color: $cor-cateno-verde;
-        border-right-color: $cor-cateno-verde;
+        border-top-color: $cor-cateno-azul;
+        border-right-color: $cor-cateno-azul;
         border-bottom-color: transparent;
         border-left-color: transparent;
     }
@@ -99,23 +100,23 @@ li{
         border-top-color: transparent;
         border-right-color: transparent;
         border-bottom-color: transparent;
-        border-left-color: $cor-cateno-verde;;
+        border-left-color: $cor-cateno-azul;;
     }
     50%{
         width: 0;
         height: 100%;
         border-top-color: transparent;
         border-right-color: transparent;
-        border-bottom-color: $cor-cateno-verde;
-        border-left-color: $cor-cateno-verde;
+        border-bottom-color: $cor-cateno-azul;
+        border-left-color: $cor-cateno-azul;
     }
     100%{
         width: 100%;
         height: 100%;
         border-top-color: transparent;
         border-right-color: transparent;
-        border-bottom-color: $cor-cateno-verde;
-        border-left-color: $cor-cateno-verde;
+        border-bottom-color: $cor-cateno-azul;
+        border-left-color: $cor-cateno-azul;
     }
 }
 @media only screen and (max-width: 999px) {
@@ -170,7 +171,7 @@ li{
     transition: 1s;
 }
 #botao-menu:hover{
-    color: $cor-cateno-verde;
+    color: $cor-cateno-azul;
 }
 
 

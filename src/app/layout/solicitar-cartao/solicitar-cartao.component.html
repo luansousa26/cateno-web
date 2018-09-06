@@ -27,12 +27,12 @@
                       maxlength="254" required>
                   </mat-form-field>
                 </div>
-                <div *ngIf="!estadoEmail" style="margin-left: 16px;" class="invalido">
+                <div *ngIf="dadosPessoais.email && !estadoEmail" style="margin-left: 16px;" class="invalido">
                   <span>E-mail inválido.</span><img class="icone-invalido" src="assets/icones/errado.png">
                 </div>
               </div>
 
-              <div align="center"><button (click)="solicitarCartao()" [disabled]="soliciCard.invalid || !estadoCpf || !estadoEmail" id="btn-solicitar"
+              <div align="center"><button (click)="solicitarCartao()" [disabled]="soliciCard.invalid || !estadoCpf || !estadoEmail" id="btn-solicitar" class="btn-padrao"
                   mat-raised-button>Prosseguir</button></div>
             </form>
           </mat-card>

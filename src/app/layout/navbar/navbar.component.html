@@ -13,10 +13,10 @@
             <a routerLink="/quem-somos"><div class="menu-itens">Quem Somos</div></a>
           </li>
           <li>
-            <div (mouseenter)="showDrop()" class="menu-itens">Soluções</div>
+           <a> <div class="menu-itens">Soluções</div></a>
           </li>
           <li>
-            <div class="menu-itens">Notícias</div>
+            <a><div class="menu-itens">Notícias</div></a>
           </li>
           <li>
             <a routerLink="/social"><div class="menu-itens">Social</div></a>
@@ -27,11 +27,11 @@
         </ul>
       </div>
     </mat-toolbar-row>
-    <mat-card id="dropdown" (mouseleave)="this.drop = false;" *ngIf="drop">
+   <!-- <mat-card id="dropdown" (mouseleave)="this.drop = false;" *ngIf="drop">
       <a routerLink="/quem-somos">EMISSÃO DE MEIOS DE PAGAMENTO PRÉ-PAGOS</a><br>
       <a routerLink="/inteligencia-em-autorizacao-e-fraude/">INTELIGÊNCIA EM AUTORIZAÇÃO E FRAUDE</a><br>
       <a routerLink="/quem-somos">GESTÃO ESTRATÉGICA DE MEIOS DE PAGAMENTO</a><br>
-    </mat-card>
+    </mat-card> -->
   </mat-toolbar>
   <div id="menu-hide" class="col-md-12 col-sm-12">
     <div id="espacamento"></div>

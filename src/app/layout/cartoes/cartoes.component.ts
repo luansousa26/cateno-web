@@ -3,21 +3,7 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
 @Component({
   selector: 'app-cartoes',
   templateUrl: './cartoes.component.html',
-  styleUrls: ['./cartoes.component.scss'],
-  animations: [
-    trigger('cartoes', [
-      state('false', style({
-        opacity: '0.5'
-      })),
-      transition('false => true', [
-        animate(4000, keyframes([
-          style({
-            opacity: '1 '
-          }),
-        ])),
-      ]),
-    ]),
-  ]
+  styleUrls: ['./cartoes.component.scss']
 })
 export class CartoesComponent implements OnInit {
 

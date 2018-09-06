@@ -4,43 +4,26 @@
 
 .cartao {
     position:relative;
-    float: right;
     width: 70%;
     height: 200px;
     margin-bottom: 5px;
-}
-.informacao-cartao{
-    position:absolute;
-    height: 140px;
-    width: 250px;
-    background: linear-gradient(to left,rgba(25, 216, 201, 0.66), rgba(51, 196, 227, 0.7294117647058823));
-    margin-top: -157px;
-    margin-left: -155px;
     text-align: center;
-    transition: all 1s;
-    cursor: pointer;
-}
-.informacao-cartao:hover > .informacao-cartao-texto{
-   color: #343a40;
 }
 /*  imagens */
 img{
-    width: 100%;
-    height: 200px;
+    width: 312px;
+    height: 400px;
 }
 
 #linha{
     margin-left: 40px;
     margin-top: 10px;
 }
-.informacao-cartao-texto{
-    margin-top: 2px;
-    color: #f8f9fa;
-    font-weight: bold;
-    font-size: 12px;
-    text-shadow: 0 0 5px #343a40;
-    transition: all 1s;
-    text-transform: uppercase;
-    font-family: Andale Mono, monospace; 
+.col-md-6{
+    padding-right: 0px;
+    padding-left: 0px;
 }
-
+.col-sm-12{
+    padding-right: 0px;
+    padding-left: 0px;
+}
