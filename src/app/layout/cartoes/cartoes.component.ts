@@ -22,13 +22,13 @@ export class CartoesComponent implements OnInit {
     console.log(window.pageYOffset);
 
     if (window.pageYOffset > 320) {
-      document.getElementById('iphone-imagem').style.marginTop = '60px';
+      document.getElementById('iphone-imagem').style.marginTop = '75px';
       this.animacaoTextoCard();
       this.animacaoTextoCadeado();
       this.animacaoTextoPagamento();
     }
     if (window.pageYOffset < 320 || window.pageYOffset === 320) {
-      document.getElementById('iphone-imagem').style.marginTop = '10px';
+      document.getElementById('iphone-imagem').style.marginTop = '6px';
     }
   }
 

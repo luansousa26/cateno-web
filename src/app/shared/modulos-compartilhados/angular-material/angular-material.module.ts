@@ -10,7 +10,8 @@ import {
   MatAutocompleteModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  MatDialogModule
+  MatDialogModule,
+  MatTableModule
 } from '@angular/material';
 import localePt from '@angular/common/locales/pt';
 registerLocaleData(localePt);
@@ -28,7 +29,8 @@ registerLocaleData(localePt);
     MatAutocompleteModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTableModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt-BR' }    

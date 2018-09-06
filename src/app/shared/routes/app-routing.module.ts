@@ -6,6 +6,8 @@ import { CadastroClienteComponent } from '../../telas/cadastro-cliente/cadastro-
 import {QuemSomosComponent} from '../../telas/quem-somos/quem-somos.component';
 import {ContatoComponent} from '../../telas/contato/contato.component';
 import {InteligenciaFraudeComponent} from '../../telas/solucoes/inteligencia-fraude/inteligencia-fraude.component';
+import { StyleComponent } from '../../layout/style/style.component';
+import { ElementosComponent } from '../../layout/style/elementos/elementos.component';
 
 
 const appRoutes: Routes = [
@@ -16,6 +18,8 @@ const appRoutes: Routes = [
   //{ path: 'noticias', component: NoticiasComponent },
   { path: 'social', component: SocialComponent },
   { path: 'contato', component: ContatoComponent },
+  { path: 'style', component: StyleComponent },
+  { path: 'elementos', component: ElementosComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: HomeComponent }
 ];
