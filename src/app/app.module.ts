@@ -29,8 +29,7 @@ import { DialogoCartaoComponent } from './telas/cadastro-cliente/dialog-cartao/d
 
 // Services Imports
 import { CadastroClienteService } from './telas/cadastro-cliente/cadastro-cliente.service';
-import { StyleComponent } from './layout/style/style.component';
-import { ElementosComponent } from './layout/style/elementos/elementos.component';
+
 
 @NgModule({
   declarations: [
@@ -46,9 +45,7 @@ import { ElementosComponent } from './layout/style/elementos/elementos.component
     SocialComponent,
     ContatoComponent,
     InteligenciaFraudeComponent,
-    DialogoCartaoComponent,
-    StyleComponent,
-    ElementosComponent
+    DialogoCartaoComponent
   ],
   imports: [
     BrowserModule,

@@ -19,8 +19,6 @@ export class CartoesComponent implements OnInit {
   }
   @HostListener('window:scroll', [])
   private scrollAnimate(): void {
-    console.log(window.pageYOffset);
-
     if (window.pageYOffset > 320) {
       document.getElementById('iphone-imagem').style.marginTop = '75px';
       this.animacaoTextoCard();
