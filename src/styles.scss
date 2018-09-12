@@ -3,7 +3,7 @@ $cor-background: rgba(245,245,245,1);
 $padrao-azul: #00aab5;
 $padrao-verde:  #b2d235;
 
-
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 * {
     margin:0;
@@ -150,7 +150,7 @@ $padrao-verde:  #b2d235;
 
 
 *{
-  font-family: "Comic Sans MS", cursive, sans-serif !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 .cor-background{

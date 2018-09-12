@@ -19,13 +19,13 @@ export class CartoesComponent implements OnInit {
   }
   @HostListener('window:scroll', [])
   private scrollAnimate(): void {
-    if (window.pageYOffset > 320) {
+    if (window.pageYOffset > 650) {
       document.getElementById('iphone-imagem').style.marginTop = '75px';
       this.animacaoTextoCard();
       this.animacaoTextoCadeado();
       this.animacaoTextoPagamento();
     }
-    if (window.pageYOffset < 320 || window.pageYOffset === 320) {
+    if (window.pageYOffset < 650 || window.pageYOffset === 900) {
       document.getElementById('iphone-imagem').style.marginTop = '6px';
     }
   }
@@ -36,27 +36,27 @@ export class CartoesComponent implements OnInit {
       this.controladorCard++;
       setTimeout(() => {
         this.animacaoTextoCard();
-      }, 90);
+      }, 120);
     }
   }
 
   private animacaoTextoCadeado(): void {
-    if (this.controladorCadeado < this.cardTexto.length) {
+    if (this.controladorCadeado < this.cadeadoText.length) {
       document.getElementById('cadeado-texto').innerHTML += this.cadeadoText.charAt(this.controladorCadeado);
       this.controladorCadeado++;
       setTimeout(() => {
         this.animacaoTextoCadeado();
-      }, 90);
+      }, 120);
     }
   }
 
   private animacaoTextoPagamento(): void {
-    if (this.controladorPagamento < this.cardTexto.length) {
+    if (this.controladorPagamento < this.pagamentoText.length) {
       document.getElementById('pagamento-texto').innerHTML += this.pagamentoText.charAt(this.controladorPagamento);
       this.controladorPagamento++;
       setTimeout(() => {
         this.animacaoTextoPagamento();
-      }, 90);
+      }, 120);
     }
   }
 }
